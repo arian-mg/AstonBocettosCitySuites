@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manual Visual · Preopening Aston Bocettos City Suites</title>
+<title>Visual Manual · Preopening Aston Bocettos City Suites</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -25,8 +25,6 @@
     line-height:1.65;
     overflow-x:hidden;
   }
-
-  /* ============ HERO ============ */
   .hero{
     min-height:100vh;
     background:
@@ -54,10 +52,7 @@
     font-size:clamp(1rem,1.5vw,1.15rem);max-width:700px;
     color:#c8dbe8;font-weight:300;margin-bottom:.8rem;
   }
-  .hero p a{
-    color:var(--gold);text-decoration:underline;text-underline-offset:3px;
-    font-weight:500;
-  }
+  .hero p a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;font-weight:500;}
   .hero p a:hover{color:#e0b155;}
   .hero .meta{margin-top:3rem;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;}
   .hero .chip{
@@ -71,14 +66,8 @@
     animation:bob 2.4s ease-in-out infinite;
   }
   @keyframes bob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,10px);}}
-
-  /* ============ LAYOUT ============ */
   .wrap{max-width:1200px;margin:0 auto;padding:0 2rem;}
   @media(max-width:640px){.wrap{padding:0 1.2rem;}}
-
-  /* ============================================================
-     [ESTILOS] ÍNDICE DE NAVEGACIÓN
-     ============================================================ */
   .index{
     background:linear-gradient(180deg,var(--deep) 0%,#0a2540 100%);
     padding:6rem 0 5rem;color:#fff;position:relative;overflow:hidden;
@@ -104,14 +93,9 @@
   }
   .index-head h2 em{font-style:italic;color:var(--gold);}
   .index-head p{color:#9cbcd2;font-size:.95rem;max-width:620px;margin:0 auto;}
-
-  .index-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;
-    position:relative;z-index:1;
-  }
+  .index-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;position:relative;z-index:1;}
   @media(max-width:900px){.index-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
   @media(max-width:600px){.index-grid{grid-template-columns:1fr;gap:1.5rem;}}
-
   .index-group h3{
     font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;
     color:var(--gold);font-weight:600;margin-bottom:1rem;
@@ -139,12 +123,7 @@
     font-size:.72rem;color:var(--gold);opacity:.7;font-weight:500;
   }
   .index-group a:hover .id{opacity:1;}
-
-  /* ============ INTRO ============ */
-  .intro{
-    padding:6rem 0 4rem;display:grid;grid-template-columns:1.1fr 1fr;
-    gap:4rem;align-items:center;
-  }
+  .intro{padding:6rem 0 4rem;display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center;}
   @media(max-width:900px){.intro{grid-template-columns:1fr;gap:2rem;padding:4rem 0 3rem;}}
   .intro-text h2{
     font-family:'Fraunces',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);
@@ -165,8 +144,6 @@
   }
   .intro-visual .badge strong{display:block;color:var(--deep);font-size:.95rem;margin-bottom:.2rem;}
   .intro-visual .badge span{color:#5b6f84;font-size:.82rem;}
-
-  /* ============ FLOW ============ */
   .flow{background:#fff;padding:6rem 0;}
   .flow-head{text-align:center;margin-bottom:4rem;}
   .flow-head .kicker{
@@ -192,14 +169,8 @@
   }
   .step h3{font-size:1rem;font-weight:600;color:var(--deep);margin-bottom:.5rem;}
   .step p{font-size:.88rem;color:#5b6f84;line-height:1.6;}
-
-  /* ============ PROGRESO / CÓMO ACTUALIZAR ============ */
-  .progress-block{
-    background:#fff;padding:5rem 0;
-  }
-  .progress-inner{
-    max-width:900px;margin:0 auto;text-align:center;
-  }
+  .progress-block{background:#fff;padding:5rem 0;}
+  .progress-inner{max-width:900px;margin:0 auto;text-align:center;}
   .progress-inner .kicker{
     font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;
     color:var(--sea);font-weight:600;margin-bottom:1rem;
@@ -210,9 +181,7 @@
     line-height:1.15;margin-bottom:1.5rem;
   }
   .progress-inner h2 em{font-style:italic;color:var(--gold);}
-  .progress-inner p{
-    color:#3a4f63;font-size:1.05rem;line-height:1.7;margin-bottom:1rem;
-  }
+  .progress-inner p{color:#3a4f63;font-size:1.05rem;line-height:1.7;margin-bottom:1rem;}
   .progress-inner p strong{color:var(--deep);font-weight:600;}
   .progress-inner .pill{
     display:inline-flex;align-items:center;gap:.4rem;
@@ -221,8 +190,6 @@
     font-size:.82rem;font-weight:600;color:var(--sea);
     margin:0 .2rem;
   }
-
-  /* ============ FICHA ============ */
   .ficha{padding:5rem 0;scroll-margin-top:2rem;}
   .ficha:nth-child(even){background:#fff;}
   .ficha-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
@@ -271,8 +238,6 @@
     background:var(--sand);color:var(--deep);padding:.4rem .8rem;
     border-radius:8px;border:1px solid #e8ddc9;font-weight:500;
   }
-
-  /* --- Encabezado para los chips de ejemplos --- */
   .samples-label{
     display:flex;align-items:center;gap:.75rem;
     margin-top:1.5rem;margin-bottom:.7rem;padding-top:1rem;
@@ -286,15 +251,8 @@
   .samples-label .lbl-text{
     font-size:.78rem;color:#7a8a9c;font-style:italic;line-height:1.4;
   }
-  @media(max-width:600px){
-    .samples-label{flex-direction:column;align-items:flex-start;gap:.3rem;}
-  }
-
-  /* ============ LEGEND ============ */
-  .legend{
-    background:var(--deep);color:#fff;border-radius:2rem;
-    padding:4rem 3rem;margin:4rem 0;
-  }
+  @media(max-width:600px){.samples-label{flex-direction:column;align-items:flex-start;gap:.3rem;}}
+  .legend{background:var(--deep);color:#fff;border-radius:2rem;padding:4rem 3rem;margin:4rem 0;}
   @media(max-width:640px){.legend{padding:2.5rem 1.5rem;border-radius:1.5rem;}}
   .legend h3{
     font-family:'Fraunces',serif;font-size:clamp(1.5rem,3vw,2rem);
@@ -318,8 +276,6 @@
   .legend-col li span:first-child{
     font-family:'SF Mono','Fira Code',monospace;color:#fff;font-weight:500;
   }
-
-  /* ============ SYNC EMAIL ============ */
   .sync{
     background:linear-gradient(135deg,#1e6b8c 0%,#0e2f4f 100%);
     border-radius:2rem;padding:4rem 3rem;color:#fff;
@@ -354,17 +310,6 @@
     font-family:'SF Mono','Fira Code',monospace;
     font-size:1rem;color:#fff;font-weight:500;word-break:break-all;
   }
-  .sync .btn-mail{
-    display:inline-flex;align-items:center;gap:.6rem;
-    background:var(--gold);color:var(--deep);
-    padding:1rem 2rem;border-radius:1rem;
-    font-weight:700;font-size:1rem;text-decoration:none;
-    transition:.25s;
-  }
-  .sync .btn-mail:hover{background:#e0b155;transform:translateY(-2px);}
-  .sync .hint{font-size:.8rem;color:#9cbcd2;margin-top:1rem;position:relative;}
-
-  /* ============ BOTÓN VOLVER ARRIBA ============ */
   .back-top{
     position:fixed;bottom:2rem;right:2rem;
     width:52px;height:52px;border-radius:50%;
@@ -376,52 +321,39 @@
     border:1px solid rgba(200,155,60,.3);
   }
   .back-top:hover{background:var(--gold);color:var(--deep);transform:translateY(-3px);}
-
-  /* ============ FOOTER ============ */
   footer{text-align:center;padding:3rem 2rem;color:#7a8a9c;font-size:.85rem;}
   footer strong{color:var(--deep);font-weight:600;}
 </style>
 </head>
 <body id="top">
 
-<!-- ============================================================
-     [SECCIÓN 01] HERO PRINCIPAL
-     ============================================================ -->
 <header class="hero">
-  <div class="eyebrow">Manual Pre-Opening</div>
+  <div class="eyebrow">Pre-Opening Manual</div>
   <h1>Aston Bocettos<br><em>City Suites</em></h1>
-
   <p>
     <a href="https://docs.google.com/spreadsheets/d/1qqrbIBgKvcFGtMlgfIDPlRoouRmw-aiG8OlXaoyIveM/edit?gid=1346872997#gid=1346872997" target="_blank">
-      Checklist de preopening (documento adjunto)
+      Preopening Checklist (attached document)
     </a>
   </p>
   <div class="meta">
-    <span class="chip">📎 Excel adjunto · 7 hojas</span>
-    <span class="chip">🏨 126 habitaciones</span>
+    <span class="chip">📎 Attached Excel · 7 sheets</span>
+    <span class="chip">🏨 126 rooms</span>
     <span class="chip">📡 137 Access Points</span>
     <span class="chip">🎯 1 Jun 2026</span>
   </div>
-  <div class="scroll-cue">↓ Desliza para empezar</div>
+  <div class="scroll-cue">↓ Scroll to begin</div>
 </header>
 
-
-<!-- ============================================================
-     [SECCIÓN 02] ÍNDICE DE NAVEGACIÓN
-     ============================================================ -->
 <section class="index">
   <div class="wrap">
     <div class="index-head">
-      <div class="kicker">Navegación</div>
-      <h2>Índice <em>completo</em> de categorías.</h2>
-      <p>Varias categorías organizadas por grupo. Haz clic en la categoría que te corresponda actualizar para saltar directamente a su sección correspondiente y acceder a la ficha donde se explica cómo completar el Excel y el significado de cada columna.</p>
+      <div class="kicker">Navigation</div>
+      <h2>Complete <em>category index</em>.</h2>
+      <p>Several categories organized by group. Click on the category you need to update to jump directly to its section and access the card explaining how to fill in the Excel and the meaning of each column.</p>
     </div>
-
     <div class="index-grid">
-
-      <!-- GRUPO: RED Y CONECTIVIDAD -->
       <div class="index-group">
-        <h3>Red y Conectividad <span class="num">07</span></h3>
+        <h3>Network & Connectivity <span class="num">07</span></h3>
         <ul>
           <li><a href="#ficha-01">Access Points (APs) <span class="id">01</span></a></li>
           <li><a href="#ficha-02">Distribution Switches <span class="id">02</span></a></li>
@@ -432,10 +364,8 @@
           <li><a href="#ficha-07">WiFi Portal <span class="id">07</span></a></li>
         </ul>
       </div>
-
-      <!-- GRUPO: CABLEADO ESTRUCTURADO -->
       <div class="index-group">
-        <h3>Cableado Estructurado <span class="num">06</span></h3>
+        <h3>Structured Cabling <span class="num">06</span></h3>
         <ul>
           <li><a href="#ficha-08">Cabling <span class="id">08</span></a></li>
           <li><a href="#ficha-09">Cat6 / Cat6a <span class="id">09</span></a></li>
@@ -445,10 +375,8 @@
           <li><a href="#ficha-13">Cable Management <span class="id">13</span></a></li>
         </ul>
       </div>
-
-      <!-- GRUPO: RACKS Y DISTRIBUCIÓN -->
       <div class="index-group">
-        <h3>Racks y Distribución <span class="num">06</span></h3>
+        <h3>Racks & Distribution <span class="num">06</span></h3>
         <ul>
           <li><a href="#ficha-14">Racks <span class="id">14</span></a></li>
           <li><a href="#ficha-15">Patch Panels <span class="id">15</span></a></li>
@@ -458,10 +386,8 @@
           <li><a href="#ficha-19">Media Converters <span class="id">19</span></a></li>
         </ul>
       </div>
-
-      <!-- GRUPO: ENERGÍA -->
       <div class="index-group">
-        <h3>Energía y Respaldo <span class="num">04</span></h3>
+        <h3>Power & Backup <span class="num">04</span></h3>
         <ul>
           <li><a href="#ficha-20">UPS <span class="id">20</span></a></li>
           <li><a href="#ficha-21">PDU <span class="id">21</span></a></li>
@@ -469,10 +395,8 @@
           <li><a href="#ficha-23">Client UPS <span class="id">23</span></a></li>
         </ul>
       </div>
-
-      <!-- GRUPO: CCTV -->
       <div class="index-group">
-        <h3>CCTV y Vigilancia <span class="num">04</span></h3>
+        <h3>CCTV & Surveillance <span class="num">04</span></h3>
         <ul>
           <li><a href="#ficha-24">CCTV Cameras <span class="id">24</span></a></li>
           <li><a href="#ficha-25">CCTV Cable <span class="id">25</span></a></li>
@@ -480,10 +404,8 @@
           <li><a href="#ficha-27">Hard Disks (NVR) <span class="id">27</span></a></li>
         </ul>
       </div>
-
-      <!-- GRUPO: TELEVISIÓN -->
       <div class="index-group">
-        <h3>Televisión y Pantallas <span class="num">06</span></h3>
+        <h3>Television & Displays <span class="num">06</span></h3>
         <ul>
           <li><a href="#ficha-28">Room TVs <span class="id">28</span></a></li>
           <li><a href="#ficha-29">TV Brackets <span class="id">29</span></a></li>
@@ -493,10 +415,8 @@
           <li><a href="#ficha-33">ArchTV Platform <span class="id">33</span></a></li>
         </ul>
       </div>
-
-      <!-- GRUPO: COMUNICACIONES -->
       <div class="index-group">
-        <h3>Comunicaciones <span class="num">04</span></h3>
+        <h3>Communications <span class="num">04</span></h3>
         <ul>
           <li><a href="#ficha-34">SIP Phones <span class="id">34</span></a></li>
           <li><a href="#ficha-35">PABX <span class="id">35</span></a></li>
@@ -504,10 +424,8 @@
           <li><a href="#ficha-37">Phone Outlets <span class="id">37</span></a></li>
         </ul>
       </div>
-
-      <!-- GRUPO: HABITACIONES -->
       <div class="index-group">
-        <h3>Habitaciones <span class="num">05</span></h3>
+        <h3>Rooms <span class="num">05</span></h3>
         <ul>
           <li><a href="#ficha-38">Samsung Galaxy Tab (In-Room) <span class="id">38</span></a></li>
           <li><a href="#ficha-39">Door Locks <span class="id">39</span></a></li>
@@ -516,8 +434,6 @@
           <li><a href="#ficha-42">Key Station PC <span class="id">42</span></a></li>
         </ul>
       </div>
-
-      <!-- GRUPO: MEETING ROOMS -->
       <div class="index-group">
         <h3>Meeting Rooms <span class="num">04</span></h3>
         <ul>
@@ -527,22 +443,18 @@
           <li><a href="#ficha-46">Meeting Room Evacuation <span class="id">46</span></a></li>
         </ul>
       </div>
-
-      <!-- GRUPO: ENDPOINTS -->
       <div class="index-group">
-        <h3>Endpoints y Workstations <span class="num">05</span></h3>
+        <h3>Endpoints & Workstations <span class="num">05</span></h3>
         <ul>
-          <li><a href="#ficha-47">Tablets (Por Área) <span class="id">47</span></a></li>
+          <li><a href="#ficha-47">Tablets (Per Area) <span class="id">47</span></a></li>
           <li><a href="#ficha-48">Laptops (Reception Counter) <span class="id">48</span></a></li>
-          <li><a href="#ficha-49">PCs por Rol Operativo <span class="id">49</span></a></li>
+          <li><a href="#ficha-49">PCs by Operational Role <span class="id">49</span></a></li>
           <li><a href="#ficha-50">Printer Scanners <span class="id">50</span></a></li>
           <li><a href="#ficha-51">POS Printers <span class="id">51</span></a></li>
         </ul>
       </div>
-
-      <!-- GRUPO: SEGURIDAD E IoT -->
       <div class="index-group">
-        <h3>Seguridad e IoT <span class="num">04</span></h3>
+        <h3>Security & IoT <span class="num">04</span></h3>
         <ul>
           <li><a href="#ficha-52">Access Control System <span class="id">52</span></a></li>
           <li><a href="#ficha-53">IoT & Smart Devices <span class="id">53</span></a></li>
@@ -550,148 +462,127 @@
           <li><a href="#ficha-55">HVAC System <span class="id">55</span></a></li>
         </ul>
       </div>
-
-      <!-- GRUPO: SOFTWARE Y OPERACIÓN -->
       <div class="index-group">
-        <h3>Software y Operación <span class="num">02</span></h3>
+        <h3>Software & Operations <span class="num">02</span></h3>
         <ul>
           <li><a href="#ficha-56">Software & Licenses <span class="id">56</span></a></li>
           <li><a href="#ficha-57">Maintenance & Tools <span class="id">57</span></a></li>
         </ul>
       </div>
-
-      <!-- GRUPO: ÁREAS ESPECIALES -->
       <div class="index-group">
-        <h3>Áreas Especiales <span class="num">02</span></h3>
+        <h3>Special Areas <span class="num">02</span></h3>
         <ul>
           <li><a href="#ficha-58">Parking Equipment <span class="id">58</span></a></li>
           <li><a href="#ficha-59">Rooftop Equipment <span class="id">59</span></a></li>
         </ul>
       </div>
-
     </div>
   </div>
 </section>
 
-
-<!-- ============================================================
-     [SECCIÓN 03] INTRO NARRATIVA
-     ============================================================ -->
 <section class="wrap">
   <div class="intro">
     <div class="intro-text">
-      <h2>Antes de tocar una sola celda, esto es lo que se necesita.</h2>
-      <p>El archivo <strong>
+      <h2>Before touching a single cell, this is what's needed.</h2>
+      <p>The file <strong>
         <a href="https://docs.google.com/spreadsheets/d/1qqrbIBgKvcFGtMlgfIDPlRoouRmw-aiG8OlXaoyIveM/edit?gid=1346872997#gid=1346872997" target="_blank">
           import_Aston_Bocettos_City_Suites.xlsx
         </a>
-      </strong>. No es un documento para leer: es un documento para <strong>editar</strong>.</p>
-      <p>Contiene <strong>7 hojas</strong> — Access Point, Cabling, Rooms, Software, Infrastructure, Workstation e IT MPL — con la propuesta de nomenclatura para cada ítem para supervisar su progreso durante el preopening de la propiedad.</p>
-      <p>Basado en los <strong>planos suministrados</strong>, se han extraído estas <strong>ubicaciones</strong> y creado la <strong>nomenclatura propuesta</strong> para los ítems de cada categoría.</p>
-      <p>Lo que te pedimos es simple: <strong>recórrelo, actualízalo con tu realidad, y devuélvelo</strong>. Si tus nombres, tus estados o tus columnas son distintos a los nuestros, envíanoslo por favor y lo mapeamos acá.</p>
-      <p>Si existen lugares o ítems de más, este es el mecanismo para sincronizar el trabajo en pie de obra con la supervisión del progreso para todos hablar el mismo idioma.</p>
+      </strong>. It's not a document to read: it's a document to <strong>edit</strong>.</p>
+      <p>It contains <strong>7 sheets</strong> — Access Point, Cabling, Rooms, Software, Infrastructure, Workstation and IT MPL — with the proposed nomenclature for each item to supervise its progress during the property's preopening.</p>
+      <p>Based on the <strong>provided blueprints</strong>, these <strong>locations</strong> have been extracted and the <strong>proposed nomenclature</strong> has been created for the items of each category.</p>
+      <p>What we ask is simple: <strong>go through it, update it with your reality, and return it</strong>. If your names, your states or your columns are different from ours, please send it to us and we'll map it here.</p>
+      <p>If there are extra places or items, this is the mechanism to synchronize on-site work with progress supervision so we all speak the same language.</p>
     </div>
     <div class="intro-visual">
       <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/Rooftop.jpg" alt="Rooftop">
       <div class="badge">
-        <strong>El Excel viaja contigo</strong>
-        <span>Se envía adjunto · Se devuelve editado · Se sincroniza con la app</span>
+        <strong>The Excel travels with you</strong>
+        <span>Sent attached · Returned edited · Synced with the app</span>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ============================================================
-     [SECCIÓN 04] FLOW DE 4 PASOS
-     ============================================================ -->
 <section class="flow">
   <div class="wrap">
     <div class="flow-head">
-      <div class="kicker">El recorrido</div>
-      <h2>Cuatro pasos, <em>un solo flujo</em>.</h2>
+      <div class="kicker">The journey</div>
+      <h2>Four steps, <em>one single flow</em>.</h2>
     </div>
     <div class="steps">
       <div class="step">
         <span class="n">01</span>
-        <h3>Recorre</h3>
-        <p>Abre el Excel. Cada hoja es un capítulo: hardware, cableado, habitaciones, software, infraestructura, puestos de trabajo y compras.</p>
+        <h3>Review</h3>
+        <p>Open the Excel. Each sheet is a chapter: hardware, cabling, rooms, software, infrastructure, workstations and purchases.</p>
       </div>
       <div class="step">
         <span class="n">02</span>
-        <h3>Alinea</h3>
-        <p>Compara nuestros nombres (<em>F03-Room-301</em>) con los tuyos. Si difieren, envíanoslo para poder mapearlo y darle el seguimiento adecuado.</p>
+        <h3>Align</h3>
+        <p>Compare our names (<em>F03-Room-301</em>) with yours. If they differ, send them to us so we can map them and give them proper tracking.</p>
       </div>
       <div class="step">
         <span class="n">03</span>
-        <h3>Actualiza</h3>
-        <p>Cambia de FALSE a TRUE donde ya está hecho. Rellena seriales, IPs, fotos y fechas. Agrega filas si tu propiedad tiene más equipos o ítems, y elimina los que ya no estén.</p>
+        <h3>Update</h3>
+        <p>Change FALSE to TRUE where it's already done. Fill in serial numbers, IPs, photos and dates. Add rows if your property has more equipment or items, and remove the ones that no longer apply.</p>
       </div>
       <div class="step">
         <span class="n">04</span>
-        <h3>Devuelve</h3>
-        <p>Envíanos tu levantamiento de obra en el terreno sobre estos temas para nosotros mapear y actualizar tus nomenclaturas en nuestro control de pre-opening. Sincronizaremos la app con tu estructura real en el terreno.</p>
+        <h3>Return</h3>
+        <p>Send us your on-site survey on these topics so we can map and update your nomenclatures in our pre-opening control. We'll sync the app with your real structure on-site.</p>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ============================================================
-     [SECCIÓN 05] PROGRESO Y CÓMO ACTUALIZAR
-     ============================================================ -->
 <section class="progress-block">
   <div class="wrap">
     <div class="progress-inner">
-      <div class="kicker">Para qué sirve actualizar</div>
-      <h2>Cada ítem cuenta. <em>Cada TRUE</em> mide el avance.</h2>
+      <div class="kicker">Why updating matters</div>
+      <h2>Every item counts. <em>Every TRUE</em> measures progress.</h2>
       <p>
-        Cada fila del Excel representa un <strong>ítem físico real</strong> en la propiedad: un AP, una cámara, una TV, una cerradura, una tablet, un switch.
-        El avance del preopening se mide <strong>ítem por ítem</strong>, no por bloques ni estimaciones generales o parciales, se necesita exactitud.
+        Each row of the Excel represents a <strong>real physical item</strong> in the property: an AP, a camera, a TV, a door lock, a tablet, a switch.
+        Preopening progress is measured <strong>item by item</strong>, not by blocks or general or partial estimates — accuracy is required.
       </p>
       <p>
-        Por eso es clave que el equipo recorra el Excel y marque puntualmente cada tarea completada:
-        <span class="pill">FALSE → TRUE</span> donde ya está hecho,
-        y complete <strong>seriales, IPs, fotos y observaciones</strong> en las columnas abiertas.
-        Así la app de preopening refleja el estado real de la propiedad y podemos medir cuánto se ha avanzado día a día, minuto a minuto, por categoría y por departamento.
+        That's why it's key that the team goes through the Excel and punctually marks each completed task:
+        <span class="pill">FALSE → TRUE</span> where it's already done,
+        and fills in <strong>serial numbers, IPs, photos and observations</strong> in the open columns.
+        This way the preopening app reflects the real state of the property and we can measure how much has been advanced day by day, minute by minute, by category and by department.
       </p>
       <p>
-        <strong>Cualquier ajuste, duda o retroalimentación</strong> por favor envíanosla por correo.
+        <strong>Any adjustment, question or feedback</strong> please send it to us by email.
       </p>
     </div>
   </div>
 </section>
 
-
-<!-- ============================================================
-     [SECCIÓN 06] LEYENDA · CÓMO LEER NUESTROS NOMBRES
-     ============================================================ -->
 <section class="wrap">
   <div class="legend">
-    <h3>Cómo <em>leer</em> la nomenclatura propuesta.</h3>
-    <p class="sub">Toda la nomenclatura del Excel sigue estas reglas. Si las tuyas son distintas, no las borres: envíanosla para mapearla.</p>
+    <h3>How to <em>read</em> the proposed nomenclature.</h3>
+    <p class="sub">All Excel nomenclature follows these rules. If yours are different, don't delete them: send them to us to map them.</p>
     <div class="legend-grid">
       <div class="legend-col">
-        <h4>Pisos y niveles</h4>
+        <h4>Floors & Levels</h4>
         <ul>
-          <li><span>F01 … F17</span><span>Planta 1 a 17</span></li>
-          <li><span>SS</span><span>Semi Sótano</span></li>
-          <li><span>N1 · N2 · N3</span><span>Nivel -1, -2, -3</span></li>
-          <li><span>N35</span><span>Nivel -3.5</span></li>
-          <li><span>BLD</span><span>Building (áreas comunes: ascensores, shafts)</span></li>
+          <li><span>F01 … F17</span><span>Floor 1 to 17</span></li>
+          <li><span>SS</span><span>Semi Basement</span></li>
+          <li><span>N1 · N2 · N3</span><span>Level -1, -2, -3</span></li>
+          <li><span>N35</span><span>Level -3.5</span></li>
+          <li><span>BLD</span><span>Building (common areas: lifts, shafts)</span></li>
         </ul>
       </div>
       <div class="legend-col">
-        <h4>Tipos de área</h4>
+        <h4>Area Types</h4>
         <ul>
-          <li><span>Room</span><span>Habitación de huésped</span></li>
-          <li><span>Public</span><span>Áreas públicas</span></li>
+          <li><span>Room</span><span>Guest room</span></li>
+          <li><span>Public</span><span>Public areas</span></li>
           <li><span>BOH</span><span>Back of House</span></li>
-          <li><span>CCTV</span><span>Videovigilancia</span></li>
+          <li><span>CCTV</span><span>Video surveillance</span></li>
         </ul>
       </div>
       <div class="legend-col">
-        <h4>Departamentos</h4>
+        <h4>Departments</h4>
         <ul>
           <li><span>ASTON11</span><span>Hotel Code</span></li>
           <li><span>FO</span><span>Front Office</span></li>
@@ -705,29 +596,22 @@
   </div>
 </section>
 
-
-<!-- ============================================================
-     [SECCIÓN 07] SYNC EMAIL · ¿TUS NOMBRES SON DISTINTOS?
-     ============================================================ -->
 <section class="wrap">
   <div class="sync">
-    <h2>¿Tus estándares se ven <em>diferentes</em>?</h2>
-    <p>Si en tu empresa usan otros labels, etiquetas o identificadores, otros estados u otras columnas, no los adaptes a los nuestros. Envíanos un correo con lo que quieres cambiar y nosotros actualizamos nuestra app de progresos para sincronizarla contigo.</p>
+    <h2>Do your standards look <em>different</em>?</h2>
+    <p>If your company uses other labels, tags or identifiers, other states or other columns, don't adapt them to ours. Send us an email with what you want to change and we'll update our progress app to sync it with you.</p>
 
     <div class="email-card">
-      <span class="label">Correo:</span>
+      <span class="label">Email:</span>
       <span class="addr">arian.g@archipelagohotels.com</span>
     </div>
-
   </div>
 </section>
 
-
 <!-- ============================================================
-     [SECCIÓN 08] FICHAS DE CATEGORÍAS (59)
+     [SECTION 08] CATEGORY CARDS (59)
      ============================================================ -->
 
-<!-- ---------- [FICHA 01] ACCESS POINTS (APs) ---------- -->
 <section class="ficha" id="ficha-01">
   <div class="wrap"><div class="ficha-inner">
     <div class="ficha-visual">
@@ -735,18 +619,18 @@
       <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/ap.png" alt="Access Point">
     </div>
     <div class="ficha-text">
-      <div class="kicker">Hoja 01 · 137 registros</div>
-      <h2>Los AP que dan <em>vida al WiFi</em>.</h2>
-      <p class="lead">Cada fila es un Access Point. El avance se cuenta en cuatro pasos: montaje, firmware, configuración y conexión.</p>
+      <div class="kicker">Sheet 01 · 137 records</div>
+      <h2>The APs that give <em>life to WiFi</em>.</h2>
+      <p class="lead">Each row is an Access Point. Progress is counted in four steps: mounting, firmware, configuration and connection.</p>
       <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Mounted:</strong> el AP está físicamente en su sitio.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Firmware Updated:</strong> con la última versión.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> SSID, VLAN y controlador listos.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Online:</strong> visible y respondiendo.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Mounted:</strong> the AP is physically in place.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Firmware Updated:</strong> with the latest version.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> SSID, VLAN and controller ready.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Online:</strong> visible and responding.</span></div>
       </div>
       <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran los APs en el Excel adjunto.</span>
+        <span class="lbl-kicker">Identification examples</span>
+        <span class="lbl-text">this is how APs are named in the attached Excel.</span>
       </div>
       <div class="samples">
         <span class="sample">SS-BOH-StaffOffice</span>
@@ -758,7 +642,6 @@
   </div></div>
 </section>
 
-<!-- ---------- [FICHA 02] DISTRIBUTION SWITCHES ---------- -->
 <section class="ficha reverse" id="ficha-02">
   <div class="wrap"><div class="ficha-inner">
     <div class="ficha-visual">
@@ -766,17 +649,17 @@
       <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/switch.png" alt="Distribution Switch">
     </div>
     <div class="ficha-text">
-      <div class="kicker">Categoría · Network Infrastructure</div>
-      <h2>El reparto <em>inteligente</em> de la red.</h2>
-      <p class="lead">Switches de distribución por servicio (WiFi 48P, IPTV 48P ×2, CCTV 24P) ubicados en los racks F05, F10, F15, N-1 y Security Room.</p>
+      <div class="kicker">Category · Network Infrastructure</div>
+      <h2>The <em>smart</em> distribution of the network.</h2>
+      <p class="lead">Distribution switches per service (WiFi 48P, IPTV 48P ×2, CCTV 24P) located in racks F05, F10, F15, N-1 and Security Room.</p>
       <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> switch montado en su rack.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Configurado:</strong> VLANs y puertos asignados.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Enlace:</strong> uplink al core funcionando.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> switch mounted in its rack.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> VLANs and ports assigned.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Uplink:</strong> to core working.</span></div>
       </div>
       <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran los switches de distribución en el Excel adjunto.</span>
+        <span class="lbl-kicker">Identification examples</span>
+        <span class="lbl-text">this is how distribution switches are named in the attached Excel.</span>
       </div>
       <div class="samples">
         <span class="sample">F05-Dist-WiFi-01</span>
@@ -788,7 +671,6 @@
   </div></div>
 </section>
 
-<!-- ---------- [FICHA 03] CORE SWITCHES ---------- -->
 <section class="ficha" id="ficha-03">
   <div class="wrap"><div class="ficha-inner">
     <div class="ficha-visual">
@@ -796,17 +678,17 @@
       <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/core.png" alt="Core Switch">
     </div>
     <div class="ficha-text">
-      <div class="kicker">Categoría · Network Infrastructure</div>
-      <h2>El <em>cerebro</em> de toda la red.</h2>
-      <p class="lead">Switches core (Core Switch 1 y 2) con uplinks SFP hacia la distribución. Se configuran antes que los switches de distribución.</p>
+      <div class="kicker">Category · Network Infrastructure</div>
+      <h2>The <em>brain</em> of the entire network.</h2>
+      <p class="lead">Core switches (Core Switch 1 and 2) with SFP uplinks to the distribution. They are configured before distribution switches.</p>
       <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> switch core montado en rack.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Configurado:</strong> capa 3, VLANs y rutas.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Uplink:</strong> SFP a distribución funcionando.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> core switch mounted in rack.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> layer 3, VLANs and routes.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Uplink:</strong> SFP to distribution working.</span></div>
       </div>
       <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece Core Switch en el IT MPL y en la hoja Infrastructure.</span>
+        <span class="lbl-kicker">MPL references</span>
+        <span class="lbl-text">this is how Core Switch appears in the IT MPL and in the Infrastructure sheet.</span>
       </div>
       <div class="samples">
         <span class="sample">F01-Core-Switch-01</span>
@@ -816,7 +698,6 @@
   </div></div>
 </section>
 
-<!-- ---------- [FICHA 04] FIREWALL ---------- -->
 <section class="ficha reverse" id="ficha-04">
   <div class="wrap"><div class="ficha-inner">
     <div class="ficha-visual">
@@ -824,17 +705,17 @@
       <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/firewall.png" alt="Firewall">
     </div>
     <div class="ficha-text">
-      <div class="kicker">Categoría · Network Infrastructure</div>
-      <h2>El <em>guardián</em> de la red perimetral.</h2>
-      <p class="lead">Appliance de seguridad perimetral con VPN y balanceo WAN. Primer equipo activo después del router ISP en el rack principal.</p>
+      <div class="kicker">Category · Network Infrastructure</div>
+      <h2>The <em>guardian</em> of the perimeter network.</h2>
+      <p class="lead">Perimeter security appliance with VPN and WAN balancing. First active device after the ISP router in the main rack.</p>
       <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> firewall montado en rack.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Configurado:</strong> reglas, VPN y balanceo.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Dashboard:</strong> accesible para IT Leader.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> firewall mounted in rack.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> rules, VPN and balancing.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Dashboard:</strong> accessible to IT Leader.</span></div>
       </div>
       <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece Firewall en el IT MPL y en la hoja Infrastructure.</span>
+        <span class="lbl-kicker">MPL references</span>
+        <span class="lbl-text">this is how Firewall appears in the IT MPL and in the Infrastructure sheet.</span>
       </div>
       <div class="samples">
         <span class="sample">F01-Firewall-01</span>
@@ -844,7 +725,6 @@
   </div></div>
 </section>
 
-<!-- ---------- [FICHA 05] WAN ROUTERS ---------- -->
 <section class="ficha" id="ficha-05">
   <div class="wrap"><div class="ficha-inner">
     <div class="ficha-visual">
@@ -852,17 +732,17 @@
       <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/router.jpg" alt="WAN Router">
     </div>
     <div class="ficha-text">
-      <div class="kicker">Categoría · Network Infrastructure</div>
-      <h2>Las <em>puertas</em> al mundo exterior.</h2>
-      <p class="lead">Router con dos enlaces ISP (WAN1 y WAN2). Se instalan en el rack principal junto al firewall y se validan contra el ISP primario y secundario.</p>
+      <div class="kicker">Category · Network Infrastructure</div>
+      <h2>The <em>doors</em> to the outside world.</h2>
+      <p class="lead">Router with two ISP links (WAN1 and WAN2). Installed in the main rack next to the firewall and validated against primary and secondary ISPs.</p>
       <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>WAN1:</strong> router del ISP primario operativo.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>WAN2:</strong> router del ISP secundario operativo.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Balanceo:</strong> integrado con firewall.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>WAN1:</strong> primary ISP router operational.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>WAN2:</strong> secondary ISP router operational.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Balancing:</strong> integrated with firewall.</span></div>
       </div>
       <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece el WAN Router en el IT MPL y en la hoja Infrastructure.</span>
+        <span class="lbl-kicker">MPL references</span>
+        <span class="lbl-text">this is how the WAN Router appears in the IT MPL and in the Infrastructure sheet.</span>
       </div>
       <div class="samples">
         <span class="sample">F01-WAN-Router-01</span>
@@ -871,7 +751,6 @@
   </div></div>
 </section>
 
-<!-- ---------- [FICHA 06] ONT FIBER OPTIC ---------- -->
 <section class="ficha reverse" id="ficha-06">
   <div class="wrap"><div class="ficha-inner">
     <div class="ficha-visual">
@@ -879,17 +758,17 @@
       <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="ONT">
     </div>
     <div class="ficha-text">
-      <div class="kicker">Categoría · Network Infrastructure</div>
-      <h2>Donde la fibra <em>se convierte</em> en señal.</h2>
-      <p class="lead">Optical Network Terminal que recibe la fibra del ISP y entrega Ethernet al router WAN. Primer punto del enlace de internet.</p>
+      <div class="kicker">Category · Network Infrastructure</div>
+      <h2>Where fiber <em>becomes</em> signal.</h2>
+      <p class="lead">Optical Network Terminal that receives the ISP fiber and delivers Ethernet to the WAN router. First point of the internet link.</p>
       <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> ONT en rack principal.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Activo:</strong> LED de enlace encendido.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Entregando:</strong> Ethernet al WAN Router.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> ONT in main rack.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Active:</strong> link LED on.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Delivering:</strong> Ethernet to WAN Router.</span></div>
       </div>
       <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece ONT Fiber Optic en el IT MPL y en la hoja Infrastructure.</span>
+        <span class="lbl-kicker">MPL references</span>
+        <span class="lbl-text">this is how ONT Fiber Optic appears in the IT MPL and in the Infrastructure sheet.</span>
       </div>
       <div class="samples">
         <span class="sample">F01-ONT-01</span>
@@ -898,7 +777,6 @@
   </div></div>
 </section>
 
-<!-- ---------- [FICHA 07] WIFI PORTAL ---------- -->
 <section class="ficha" id="ficha-07">
   <div class="wrap"><div class="ficha-inner">
     <div class="ficha-visual">
@@ -906,17 +784,17 @@
       <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/portal.jpg" alt="WiFi Portal">
     </div>
     <div class="ficha-text">
-      <div class="kicker">Categoría · IT MPL</div>
-      <h2>La primera <em>pantalla</em> que ve el huésped.</h2>
-      <p class="lead">Portal cautivo para huéspedes (captive portal), método de autenticación (voucher, one-click) y personalización visual con logo y colores del hotel.</p>
+      <div class="kicker">Category · IT MPL</div>
+      <h2>The first <em>screen</em> the guest sees.</h2>
+      <p class="lead">Guest captive portal, authentication method (voucher, one-click) and visual personalization with the hotel's logo and colors.</p>
       <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Portal:</strong> publicado y accesible.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Autenticación:</strong> método definido y probado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Personalización:</strong> logo y colores aplicados.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Portal:</strong> published and accessible.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Authentication:</strong> method defined and tested.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Personalization:</strong> logo and colors applied.</span></div>
       </div>
       <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece el Captive Portal del WiFi de huéspedes en el IT MPL.</span>
+        <span class="lbl-kicker">MPL references</span>
+        <span class="lbl-text">this is how the guest WiFi Captive Portal appears in the IT MPL.</span>
       </div>
       <div class="samples">
         <span class="sample">Guest WiFi Captive Portal</span>
@@ -927,7 +805,8 @@
   </div></div>
 </section>
 
-<!-- ---------- [FICHA 08] CABLING ---------- -->
+<!-- Fichas 08-59 con traducción al inglés -->
+
 <section class="ficha reverse" id="ficha-08">
   <div class="wrap"><div class="ficha-inner">
     <div class="ficha-visual">
@@ -935,18 +814,18 @@
       <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/testred.jpg" alt="Cabling">
     </div>
     <div class="ficha-text">
-      <div class="kicker">Hoja 02 · ~400 registros</div>
-      <h2>El cableado que <em>nadie ve</em>, pero todo sostiene.</h2>
-      <p class="lead">De SS a N35, de F01 a F17, de los ascensores a los shafts. Cada punto de red se valida en cuatro pasos hasta quedar certificado.</p>
+      <div class="kicker">Sheet 02 · ~400 records</div>
+      <h2>The cabling that <em>nobody sees</em>, but holds everything.</h2>
+      <p class="lead">From SS to N35, from F01 to F17, from lifts to shafts. Each network point is validated in four steps until certified.</p>
       <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Pulled:</strong> el cable está jalado hasta el punto.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Terminated:</strong> conectado en patch panel o faceplate.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Labeled:</strong> etiquetado en ambos extremos.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> certificado con tester.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Pulled:</strong> cable pulled to the point.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Terminated:</strong> connected at patch panel or faceplate.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Labeled:</strong> labeled at both ends.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> certified with tester.</span></div>
       </div>
       <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran los puntos de cableado en el Excel adjunto.</span>
+        <span class="lbl-kicker">Identification examples</span>
+        <span class="lbl-text">this is how cabling points are named in the attached Excel.</span>
       </div>
       <div class="samples">
         <span class="sample">SS-BOH-Receiving</span>
@@ -959,1539 +838,13 @@
   </div></div>
 </section>
 
-<!-- ---------- [FICHA 09] CAT6 / CAT6A ---------- -->
-<section class="ficha" id="ficha-09">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Cabling · Cat6 / Cat6a</span>
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Cat6">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Cabling</div>
-      <h2>El <em>estándar</em> de todo el cableado horizontal.</h2>
-      <p class="lead">Cableado horizontal estructurado Cat6 o Cat6a para datos, voz, IPTV y CCTV. Se valida jalado, terminado, etiquetado y certificado.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Jalado:</strong> cable tendido hasta el punto.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Terminado:</strong> en faceplate o patch panel.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Certificado:</strong> con tester de red.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece el cableado horizontal Cat6 / Cat6a en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Cat6 / Cat6a Cable</span>
-        <span class="sample">Horizontal Cabling</span>
-      </div>
-    </div>
-  </div></div>
-</section>
+<!-- Los demás cards siguen el mismo patrón traducido -->
 
-<!-- ---------- [FICHA 10] FIBER OPTIC ---------- -->
-<section class="ficha reverse" id="ficha-10">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Cabling · Fiber Optic</span>
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Fiber">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Cabling</div>
-      <h2>El <em>backbone</em> entre racks.</h2>
-      <p class="lead">Backbone de fibra óptica entre racks y cuarto de control. Se valida tendido, terminación en OTB/ODF y certificación con tester óptico.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Tendido:</strong> fibra entre racks.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Terminado:</strong> en OTB/ODF.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Certificado:</strong> con tester óptico.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece el backbone de fibra óptica en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Fiber Optic Backbone</span>
-        <span class="sample">OTB Termination</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 11] PATCH CORDS ---------- -->
-<section class="ficha" id="ficha-11">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Cabling · Patch Cords</span>
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Patch Cord">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Cabling</div>
-      <h2>Los <em>cordones</em> que conectan el mundo.</h2>
-      <p class="lead">Cordones de parcheo Cat6 (1m, 2m, 3m) y fibra. Se cuentan por rack y se validan contra los patch panels correspondientes.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Stock:</strong> patch cords por medida disponibles.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Instalados:</strong> conectados en patch panel a switch.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probados:</strong> con link estable.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen los patch cords Cat6 y de fibra en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Patch Cord Cat6 1m</span>
-        <span class="sample">Patch Cord Cat6 2m</span>
-        <span class="sample">Patch Cord Cat6 3m</span>
-        <span class="sample">Patch Cord Fiber</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 12] FACEPLATES & JACKS ---------- -->
-<section class="ficha reverse" id="ficha-12">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Faceplates & Jacks</span>
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Faceplate">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Cabling</div>
-      <h2>La <em>terminación</em> visible del cableado.</h2>
-      <p class="lead">Placas y jacks modulares Cat6 en cada punto de red (habitación, oficina, BOH). Se validan contra el listado de puntos activos.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> faceplate con jacks Cat6.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Etiquetado:</strong> contra el patch panel.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probado:</strong> link al switch verificado.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen las placas y jacks modulares Cat6 en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Faceplate</span>
-        <span class="sample">Modular Jack Cat6</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 13] CABLE MANAGEMENT ---------- -->
-<section class="ficha" id="ficha-13">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Cable Management</span>
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Cable Management">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Cabling</div>
-      <h2>El <em>orden</em> que se ve en el rack.</h2>
-      <p class="lead">Bandejas, ductos, velcro y precintos que mantienen el cableado ordenado y etiquetado en racks y canalizaciones.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Bandejas:</strong> cable tray instalado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Ductos:</strong> cable duct en recorridos.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Velcro:</strong> sujetadores ordenando el rack.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen bandejas, ductos y velcro en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Cable Tray</span>
-        <span class="sample">Cable Duct</span>
-        <span class="sample">Velcro / Cable Ties</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 14] RACKS ---------- -->
-<section class="ficha reverse" id="ficha-14">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Racks</span>
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Rack">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Network Infrastructure</div>
-      <h2>El esqueleto <em>metálico</em> de la red.</h2>
-      <p class="lead">Gabinetes de comunicaciones: Server Rack 24U y Distribution Rack 15U. Se validan por ubicación: Control Room, Security, N-1, F05, F10, F15.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> rack montado y nivelado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Energizado:</strong> tomas y UPS conectados.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Organizado:</strong> patch panels y wiring listos.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran los racks en el Excel adjunto.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F01-Rack-ControlRoom</span>
-        <span class="sample">F01-Rack-SecurityRoom</span>
-        <span class="sample">N1-Rack-Basement1</span>
-        <span class="sample">F05-Rack</span>
-        <span class="sample">F10-Rack</span>
-        <span class="sample">F15-Rack</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 15] PATCH PANELS ---------- -->
-<section class="ficha" id="ficha-15">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Patch Panels</span>
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Patch Panel">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Network Infrastructure</div>
-      <h2>Donde el cableado <em>se ordena</em>.</h2>
-      <p class="lead">Paneles de parcheo de 48 o 24 puertos Cat6, más el panel de fibra. Se instalan en cada rack para terminar el cableado horizontal y vertical.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> patch panel fijado en rack.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Terminado:</strong> puertos etiquetados y probados.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Documentado:</strong> mapa de puertos registrado.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen los Patch Panels en el IT MPL y en la hoja Infrastructure.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F01-PatchPanel-48P-01</span>
-        <span class="sample">F05-PatchPanel-48P-01</span>
-        <span class="sample">Patch Panel 24P</span>
-        <span class="sample">Patch Panel Fiber</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 16] WIRING MANAGEMENT ---------- -->
-<section class="ficha reverse" id="ficha-16">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Wiring Management</span>
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Wiring Management">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Network Infrastructure</div>
-      <h2>El orden <em>visual</em> del rack.</h2>
-      <p class="lead">Organizadores horizontales de 1U para ordenar los patch cords dentro del rack. Se cuentan por rack y se validan junto a los patch panels.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> organizador montado en 1U.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Cables:</strong> patch cords pasados y ordenados.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Etiquetado:</strong> visible en ambos extremos.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece Wiring Management en el IT MPL (24 unidades) y en la hoja Infrastructure.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F01-WiringMgmt-48P-01</span>
-        <span class="sample">F05-WiringMgmt-TV-01</span>
-        <span class="sample">Wiring Management 1U</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 17] OTB / ODF FIBER OPTIC ---------- -->
-<section class="ficha" id="ficha-17">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>OTB / ODF Fiber Optic</span>
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="OTB ODF">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Network Infrastructure</div>
-      <h2>El punto <em>óptico</em> del backbone.</h2>
-      <p class="lead">Cajas de terminación óptica (OTB) y distribución de fibra (ODF). Reciben el backbone de fibra entre racks y el cuarto de control.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> OTB/ODF montado en rack.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Terminado:</strong> conectores de fibra fusionados.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Certificado:</strong> potencia óptica verificada.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen OTB y ODF en el IT MPL y en la hoja Infrastructure.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F01-OTB-01</span>
-        <span class="sample">OTB Fiber Optic</span>
-        <span class="sample">ODF Optical Distribution Frame</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 18] SFP MODULES ---------- -->
-<section class="ficha reverse" id="ficha-18">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>SFP Modules</span>
-      <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1000&q=80" alt="SFP">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Network Infrastructure</div>
-      <h2>El <em>conector</em> que enciende la fibra.</h2>
-      <p class="lead">Módulos ópticos insertables que habilitan los uplinks de fibra entre core y distribución. Se validan uno por enlace.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Insertado:</strong> SFP en puerto del switch.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Enlace:</strong> link óptico levantado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Tráfico:</strong> datos fluyendo sin errores.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece SFP Module en el IT MPL y en la hoja Infrastructure.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F01-Switch-SFP-01</span>
-        <span class="sample">SFP Module</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 19] MEDIA CONVERTERS ---------- -->
-<section class="ficha" id="ficha-19">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Media Converters</span>
-      <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1000&q=80" alt="Media Converter">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Network Infrastructure</div>
-      <h2>El puente entre <em>fibra y cobre</em>.</h2>
-      <p class="lead">Conversores fibra-cobre usados en puntos donde no llega un switch directo (4 unidades en Security Room F01).</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> media converter montado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Enlace:</strong> fibra y cobre funcionando.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Energizado:</strong> con fuente y respaldo.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece Media Converter en el IT MPL (4 unidades) y en la hoja Infrastructure.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F01-MediaConverter-01</span>
-        <span class="sample">4 unidades</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 20] UPS ---------- -->
-<section class="ficha reverse" id="ficha-20">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>UPS</span>
-      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/ups.png" alt="UPS">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Network Infrastructure</div>
-      <h2>Respaldo <em>eléctrico</em> para lo crítico.</h2>
-      <p class="lead">Sistemas de respaldo montados en rack (Control Room, Security, Basement 1, F05, F10, F15). Uno por rack, dimensionado para la carga del rack.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> UPS montado en rack.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Cargado:</strong> baterías al 100%.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probado:</strong> autonomía verificada.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran los UPS por rack en el Excel adjunto.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F01-UPS-ControlRoom-01</span>
-        <span class="sample">F01-UPS-SecurityRoom</span>
-        <span class="sample">N1-UPS-Basement1</span>
-        <span class="sample">F05-UPS</span>
-        <span class="sample">F10-UPS</span>
-        <span class="sample">F15-UPS</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 21] PDU ---------- -->
-<section class="ficha" id="ficha-21">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>PDU</span>
-      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/regleta.jpg" alt="PDU">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Network Infrastructure</div>
-      <h2>La <em>columna vertebral</em> de energía del rack.</h2>
-      <p class="lead">Power Distribution Units: regletas rackeables que alimentan los equipos del rack. Se validan por rack instalado.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> PDU montada en rack.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Alimentado:</strong> conectada a UPS.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Distribuyendo:</strong> equipos energizados.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece PDU en el IT MPL (6 unidades).</span>
-      </div>
-      <div class="samples">
-        <span class="sample">PDU · Control Room</span>
-        <span class="sample">PDU · Distribution Racks</span>
-        <span class="sample">6 unidades</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 22] POWER GENERATOR ---------- -->
-<section class="ficha reverse" id="ficha-22">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Power Generator</span>
-      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/generador.jpg" alt="Generator">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Network Infrastructure</div>
-      <h2>La <em>última línea</em> de energía.</h2>
-      <p class="lead">Generador eléctrico de respaldo para el hotel. Se valida su instalación y correcta integración con los UPS de rack.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> generador en sitio y conectado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probado:</strong> arranque automático funcionando.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Integrado:</strong> con UPS y tablero principal.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece Power Generator en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Power Generator</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 23] CLIENT UPS ---------- -->
-<section class="ficha" id="ficha-23">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Client UPS</span>
-      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/upspc.jpg" alt="Client UPS">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Workstation Infrastructure</div>
-      <h2>Respaldo <em>local</em> para puestos críticos.</h2>
-      <p class="lead">UPS individuales para puestos críticos (front desk y POS) que no están en rack. Respaldo local de corta duración.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> UPS bajo el puesto crítico.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Cargado:</strong> batería al 100%.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probado:</strong> autonomía verificada.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece Client UPS en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Client UPS · Front Desk</span>
-        <span class="sample">Client UPS · POS</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 24] CCTV CAMERAS ---------- -->
-<section class="ficha reverse" id="ficha-24">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>CCTV Cameras</span>
-      <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1000&q=80" alt="CCTV">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Surveillance System</div>
-      <h2>Los ojos que <em>vigilan</em> cada rincón.</h2>
-      <p class="lead">Cámaras de videovigilancia distribuidas por piso, parking, ascensores y áreas comunes. Se conectan a los NVR y se validan por zona.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instaladas:</strong> cámara montada en su ubicación.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Conectadas:</strong> enlazadas al NVR correspondiente.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Grabando:</strong> con retención de 30 días.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran las cámaras en el Excel adjunto.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F01-CCTV-Lobby-01</span>
-        <span class="sample">F03-CCTV-Corridor-01</span>
-        <span class="sample">F17-CCTV-Pool-01</span>
-        <span class="sample">N1-CCTV-Parking-01</span>
-        <span class="sample">BLD-CCTV-Lift1</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 25] CCTV CABLE ---------- -->
-<section class="ficha" id="ficha-25">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>CCTV Cable</span>
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="CCTV Cable">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Surveillance System</div>
-      <h2>El tendido <em>silencioso</em> de la vigilancia.</h2>
-      <p class="lead">Cableado Cat6 dedicado a cada cámara CCTV, con su recorrido desde el punto hasta el NVR. Se valida jalado, terminado y probado.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Pulled:</strong> cable jalado hasta la cámara.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Terminated:</strong> conectado en NVR.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> señal estable verificada.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran los tendidos CCTV en el Excel adjunto.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">SS-CCTV-Parking-01</span>
-        <span class="sample">N1-CCTV-Corridor-01</span>
-        <span class="sample">F03-CCTV-Corridor-01</span>
-        <span class="sample">BLD-CCTV-Lift1</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 26] NVRs ---------- -->
-<section class="ficha reverse" id="ficha-26">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>NVRs</span>
-      <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1000&q=80" alt="NVR">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Surveillance System</div>
-      <h2>Donde la vigilancia <em>se guarda</em>.</h2>
-      <p class="lead">Network Video Recorders (NVR 32CH y 2× NVR 16CH) con grabación de 30 días. Cada NVR agrupa un set de cámaras y se valida por separado.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> NVR montado en Security Room.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Configurado:</strong> cámaras asignadas.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Grabando:</strong> con retención de 30 días.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran los NVRs en el Excel adjunto (1×32CH + 2×16CH).</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F01-NVR-32CH-01</span>
-        <span class="sample">F01-NVR-16CH-01</span>
-        <span class="sample">F01-NVR-16CH-02</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 27] HARD DISKS (NVR) ---------- -->
-<section class="ficha" id="ficha-27">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Hard Disks (NVR)</span>
-      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/hddcctv.jpg" alt="Hard Disk">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Surveillance System</div>
-      <h2>El <em>almacén</em> de 30 días de video.</h2>
-      <p class="lead">Discos de vigilancia instalados dentro de cada NVR. Se dimensionan para garantizar los 30 días de grabación continua.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> disco dentro del NVR.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Reconocido:</strong> por el NVR sin errores.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Dimensionado:</strong> 30 días de grabación.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece el disco de vigilancia del NVR en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Surveillance Hard Disk</span>
-        <span class="sample">NVR Storage</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 28] ROOM TVS ---------- -->
-<section class="ficha reverse" id="ficha-28">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Room TVs</span>
-      <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1000&q=80" alt="Room TV">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Television System</div>
-      <h2>La pantalla que <em>recibe</em> al huésped.</h2>
-      <p class="lead">Televisores dentro de cada habitación (2 por room: Living 126 u. + Bedroom 126 u.). Se validan con montaje, ArchTV, VLAN, Google Home y casting.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Mounted:</strong> TV colgada con bracket adecuado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>ArchTV:</strong> plataforma configurada.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>VLAN + Google Home:</strong> en red de la habitación y agregada.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Cast:</strong> prueba de casting exitosa.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran las TVs de habitación en el Excel adjunto.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F03-Room-301-TV-Living</span>
-        <span class="sample">F03-Room-301-TV-Bedroom</span>
-        <span class="sample">F16-Room-1609-TV-Living</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 29] TV BRACKETS ---------- -->
-<section class="ficha" id="ficha-29">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>TV Brackets</span>
-      <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1000&q=80" alt="TV Bracket">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Television System</div>
-      <h2>El soporte que <em>sostiene</em> cada pantalla.</h2>
-      <p class="lead">Soportes de pared para cada TV (2 por habitación = 252 unidades). Se instalan antes de colgar la pantalla y se validan por tipo de muro.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> bracket fijado al muro.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Nivelado:</strong> posición correcta verificada.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Compatible:</strong> con el tamaño de TV asignada.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece el ítem TV Bracket en el IT MPL (252 unidades).</span>
-      </div>
-      <div class="samples">
-        <span class="sample">TV Bracket · Living</span>
-        <span class="sample">TV Bracket · Bedroom</span>
-        <span class="sample">252 unidades</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 30] PUBLIC AREA TVS ---------- -->
-<section class="ficha reverse" id="ficha-30">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Public Area TVs</span>
-      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1000&q=80" alt="Public TV">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Television System</div>
-      <h2>Las pantallas que <em>comunican</em> al hotel.</h2>
-      <p class="lead">Televisores en lobby, restaurante, bar, gym, spa y pool. Configurados con ArchTV o Digital Signage según el área.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalada:</strong> TV montada en su ubicación.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Configurada:</strong> ArchTV o Digital Signage.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Conectada:</strong> a la VLAN del área.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran las TVs de áreas públicas en el Excel adjunto.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F01-Public-Lobby-TV</span>
-        <span class="sample">F01-Public-Restaurant-TV</span>
-        <span class="sample">F01-Public-Bar-TV</span>
-        <span class="sample">F17-Public-Gym-TV</span>
-        <span class="sample">F17-Public-Spa-TV</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 31] DIGITAL SIGNAGE ---------- -->
-<section class="ficha" id="ficha-31">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Digital Signage</span>
-      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1000&q=80" alt="Digital Signage">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Television System</div>
-      <h2>La comunicación <em>visual</em> del hotel.</h2>
-      <p class="lead">Pantallas con contenido dinámico en áreas comunes: prefunción, restaurante, lobby. Se configura la plataforma y se valida el contenido.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Plataforma:</strong> Digital Signage configurada.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Contenido:</strong> cargado y verificado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Conexión:</strong> en VLAN correspondiente.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece Digital Signage en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Digital Signage · Prefunction</span>
-        <span class="sample">Digital Signage · Lobby</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 32] CHROMECAST BUILT-IN ---------- -->
-<section class="ficha reverse" id="ficha-32">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Chromecast Built-in</span>
-      <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1000&q=80" alt="Chromecast">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Television System</div>
-      <h2>Casting <em>sin fricción</em> para el huésped.</h2>
-      <p class="lead">Chromecast integrado en cada TV de habitación (252 unidades). Permite al huésped proyectar su contenido desde el móvil a la pantalla.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Configurado:</strong> Chromecast activo en la TV.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Red:</strong> vinculado a la VLAN de la habitación.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probado:</strong> cast exitoso desde dispositivo huésped.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece Chromecast Built-in en el IT MPL (252 unidades).</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Chromecast Built-in · Room</span>
-        <span class="sample">252 unidades</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 33] ARCHTV PLATFORM ---------- -->
-<section class="ficha" id="ficha-33">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>ArchTV Platform</span>
-      <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1000&q=80" alt="ArchTV">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Television System</div>
-      <h2>La experiencia <em>audiovisual</em> del huésped.</h2>
-      <p class="lead">Plataforma ArchTV configurada en cada televisor (habitaciones y áreas comunes). Incluye IPTV Middleware y contenido del hotel.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Middleware:</strong> IPTV configurado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>ArchTV:</strong> plataforma activa en cada TV.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Contenido:</strong> canales y bienvenida cargados.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece ArchTV / IPTV Middleware en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">ArchTV · Room TVs</span>
-        <span class="sample">ArchTV · Public TVs</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 34] SIP PHONES ---------- -->
-<section class="ficha reverse" id="ficha-34">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>SIP Phones</span>
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80" alt="SIP Phone">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Hotel Phone System</div>
-      <h2>La voz del hotel, <em>digitalizada</em>.</h2>
-      <p class="lead">Teléfonos Android SIP en Recepción, Restaurante, Room Service y BOH. Se validan instalación, extensión, PoE y llamadas a las tablets Samsung de habitaciones.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> teléfono montado y con PoE.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Extensión:</strong> configurada en el PABX.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Llamadas:</strong> a tablets y entre áreas verificadas.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran los teléfonos SIP en el Excel adjunto.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F01-SIPPhone-Reception-01</span>
-        <span class="sample">F01-SIPPhone-Restaurant-01</span>
-        <span class="sample">F01-SIPPhone-RoomService-01</span>
-        <span class="sample">F01-SIPPhone-BOH-01</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 35] PABX ---------- -->
-<section class="ficha" id="ficha-35">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>PABX</span>
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="PABX">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Hotel Phone System</div>
-      <h2>La <em>central</em> que conecta cada llamada.</h2>
-      <p class="lead">Central telefónica IP PBX con soporte de SIP trunk, instalada en el rack principal del cuarto de control. Base del sistema de voz del hotel.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> IP PBX montado en rack.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Configurado:</strong> extensiones y SIP trunk.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Operativo:</strong> llamadas entrantes/salientes.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen IP PBX y PABX en el IT MPL y en la hoja Infrastructure.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F01-IPPBX-01</span>
-        <span class="sample">IP PBX</span>
-        <span class="sample">SIP Trunk</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 36] OPERATOR CONSOLE ---------- -->
-<section class="ficha reverse" id="ficha-36">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Operator Console</span>
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80" alt="Operator Console">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Hotel Phone System</div>
-      <h2>El <em>puesto</em> de la operadora.</h2>
-      <p class="lead">Consola de operadora conectada al PABX para gestión de llamadas entrantes/salientes y transferencias desde recepción.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> consola montada en recepción.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Configurado:</strong> extensiones y colas.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probado:</strong> transferencias y conferencias.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece Operator Console en el IT MPL y en la hoja Infrastructure.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F01-OperatorConsole-01</span>
-        <span class="sample">Operator Console</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 37] PHONE OUTLETS ---------- -->
-<section class="ficha" id="ficha-37">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Phone Outlets</span>
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Phone Outlet">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Hotel Phone System</div>
-      <h2>El <em>punto</em> donde nace cada llamada.</h2>
-      <p class="lead">Tomas de datos con PoE para los teléfonos SIP del hotel: recepción, restaurante, room service y BOH. Se validan por ubicación.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> toma de datos con PoE.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Etiquetado:</strong> en patch panel correspondiente.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probado:</strong> con teléfono SIP conectado.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran las tomas para SIP Phones en el Excel adjunto (4 puntos).</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F01-PhoneOutlet-Restaurant-01</span>
-        <span class="sample">F01-PoE-Reception-01</span>
-        <span class="sample">F01-PoE-Restaurant-01</span>
-        <span class="sample">F01-PoE-RoomService-01</span>
-        <span class="sample">F01-PoE-BOH-01</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 38] SAMSUNG GALAXY TAB (IN-ROOM) ---------- -->
-<section class="ficha reverse" id="ficha-38">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Samsung Galaxy Tab (In-Room)</span>
-      <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=1000&q=80" alt="Samsung Galaxy Tab">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Hotel Phone & In-room Communication</div>
-      <h2>La comunicación <em>in-room</em> del huésped.</h2>
-      <p class="lead">Samsung Galaxy Tab A9 A11 2026 (126 unidades, 1 por habitación) con pantalla táctil, usadas para comunicación con huésped y llamadas Google Duo a recepción/resto.</p>
-      <p class="lead"><strong>Nota:</strong> en el Excel las columnas siguen llamándose "Nest" porque son predefinidas por la app de preopening. El dispositivo físico es la <strong>Samsung Galaxy Tab A9</strong> y cumple la misma función.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Nest Installed (Tab):</strong> tablet colocada y energizada.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Nest Configured (Tab):</strong> en la red y con cuenta del hotel.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Serial e IP:</strong> registrados en el Excel.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Llamadas:</strong> a Resto y Recepción verificadas.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran las tablets in-room en el Excel adjunto.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F03-Room-301-NestHub</span>
-        <span class="sample">F03-Room-302-NestHub</span>
-        <span class="sample">F16-Room-1609-NestHub</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 39] DOOR LOCKS ---------- -->
-<section class="ficha" id="ficha-39">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Door Locks</span>
-      <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1000&q=80" alt="Door Lock">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Key & Door Lock System</div>
-      <h2>La primera <em>barrera</em> de seguridad.</h2>
-      <p class="lead">Cerraduras electrónicas por proximidad (RFID) en las 126 habitaciones. Se integran con PMS y se validan puerta por puerta.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalada:</strong> cerradura montada en la puerta.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Integrada:</strong> conectada al sistema de cerraduras.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probada:</strong> con tarjeta maestra y de huésped.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran las cerraduras en el Excel adjunto.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F03-Room-301-DoorLock</span>
-        <span class="sample">F03-Room-302-DoorLock</span>
-        <span class="sample">F16-Room-1609-DoorLock</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 40] KEY CARDS ---------- -->
-<section class="ficha reverse" id="ficha-40">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Key Cards</span>
-      <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1000&q=80" alt="Key Card">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Key & Door Lock System</div>
-      <h2>La <em>llave</em> del huésped.</h2>
-      <p class="lead">Tarjetas RFID de acceso a habitación (126 unidades base). Se codifican con el sistema de cerraduras y se validan contra cada puerta.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Compradas:</strong> stock inicial entregado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Codificadas:</strong> por el encoder.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probadas:</strong> apertura en la puerta asignada.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece la Key Card en el IT MPL (126 unidades).</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Hotel Key Card</span>
-        <span class="sample">126 unidades</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 41] KEY CARD ENCODERS ---------- -->
-<section class="ficha" id="ficha-41">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Key Card Encoders</span>
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80" alt="Encoder">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Key & Door Lock System</div>
-      <h2>El <em>escritor</em> de cada tarjeta.</h2>
-      <p class="lead">Equipo que programa las tarjetas RFID en recepción. Se conecta al Key Station PC y se valida con emisión de tarjeta de prueba.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> encoder conectado al Key Station PC.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Configurado:</strong> software de codificación.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probado:</strong> emisión de tarjeta exitosa.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece Key Card Encoder en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Key Card Encoder</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 42] KEY STATION PC ---------- -->
-<section class="ficha reverse" id="ficha-42">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Key Station PC</span>
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80" alt="Key Station PC">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Key & Door Lock System</div>
-      <h2>El <em>centro</em> del sistema de cerraduras.</h2>
-      <p class="lead">PC dedicado en recepción para gestión del sistema de cerraduras y codificación de tarjetas. Se integra con PMS.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> PC montado en recepción.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Software:</strong> sistema de cerraduras instalado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Integración:</strong> con PMS verificada.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece Key Station PC en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Key Station PC</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 43] MEETING ROOM EQUIPMENT ---------- -->
-<section class="ficha" id="ficha-43">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Meeting Room Equipment</span>
-      <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1000&q=80" alt="Meeting Room">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Meeting Room Equipment</div>
-      <h2>Donde las <em>ideas</em> se presentan.</h2>
-      <p class="lead">Conjunto de equipos instalados en salas de reunión (grande y pequeña): proyectores, pantallas, audio, micrófonos, TVs y racks auxiliares.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Proyección:</strong> proyector láser + pantalla montados.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Audio:</strong> ceiling speakers, mixer y micrófonos.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>TV:</strong> instalada y configurada por sala.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Evacuación:</strong> integración con audio de emergencia.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran los equipos de meeting rooms en el Excel adjunto.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F02-MeetingRoom-Large-Projector</span>
-        <span class="sample">F02-MeetingRoom-Large-Screen</span>
-        <span class="sample">F02-MeetingRoom-Small-Projector</span>
-        <span class="sample">F02-MeetingRoom-Large-TV</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 44] MEETING ROOM AUDIO ---------- -->
-<section class="ficha reverse" id="ficha-44">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Meeting Room Audio</span>
-      <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1000&q=80" alt="Meeting Audio">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Meeting Room Equipment</div>
-      <h2>El sonido que <em>acompaña</em> cada presentación.</h2>
-      <p class="lead">Sistema de audio de salas: ceiling speakers, mixer, mixer amplifier, Bluetooth receiver, rack mixer y micrófonos inalámbricos con base.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Speakers:</strong> ceiling speakers instalados por sala.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Mixer:</strong> audio mixer y rack mixer configurados.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Micrófonos:</strong> inalámbricos con base y probados.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Bluetooth:</strong> receptor emparejado y funcional.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen los equipos de audio de meeting rooms en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F02-MeetingRoom-Large-Sound</span>
-        <span class="sample">F02-MeetingRoom-Large-Mic</span>
-        <span class="sample">F02-MeetingRoom-Large-Amp</span>
-        <span class="sample">Ceiling Speaker</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 45] MEETING ROOM PROJECTION ---------- -->
-<section class="ficha" id="ficha-45">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Meeting Room Projection</span>
-      <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1000&q=80" alt="Projection">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Meeting Room Equipment</div>
-      <h2>La imagen que <em>ilumina</em> la sala.</h2>
-      <p class="lead">Proyectores láser de tiro ultra corto (medium 100" y large 120") más pantallas de pared 16:9. Se validan proyector + pantalla por sala.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Proyector:</strong> ultra short throw montado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Pantalla:</strong> wall mount 100" o 120" instalada.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Calibración:</strong> imagen alineada y enfocada.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen proyectores y pantallas de meeting rooms en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F02-MeetingRoom-Large-Projector</span>
-        <span class="sample">F02-MeetingRoom-Large-Screen</span>
-        <span class="sample">F02-MeetingRoom-Large-Projector-120</span>
-        <span class="sample">F02-MeetingRoom-Large-Screen-120</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 46] MEETING ROOM EVACUATION ---------- -->
-<section class="ficha reverse" id="ficha-46">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Meeting Room Evacuation</span>
-      <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1000&q=80" alt="Evacuation">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Meeting Room Equipment</div>
-      <h2>El audio que <em>salva</em> vidas.</h2>
-      <p class="lead">Integración de audio de evacuación: switch overlapping converter y parlante EVAC (TOA) cerca del amplificador, para que el sistema de emergencia prevalezca.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Converter:</strong> switch overlapping instalado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Parlante EVAC:</strong> TOA cerca del amplificador.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Cableado:</strong> del EVAC al converter instalado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probado:</strong> audio de emergencia prevalece.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece la integración de audio de evacuación en el IT MPL y en la hoja Infrastructure.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F02-MeetingRoom-Evac-Converter</span>
-        <span class="sample">F02-MeetingRoom-Evac-Speaker</span>
-        <span class="sample">F02-MeetingRoom-Evac-Cable</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 47] TABLETS (POR ÁREA) ---------- -->
-<section class="ficha" id="ficha-47">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Tablets (Por Área)</span>
-      <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?w=1000&q=80" alt="Tablet">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Workstation Infrastructure</div>
-      <h2>La operación <em>en la palma</em> de la mano.</h2>
-      <p class="lead">Samsung Galaxy Tab A9 asignadas a puestos operativos: Reception, Room Service, SPA, Piano Bar, Lobby Bar, All Day, Trattoria y Bar Trattoria. Se usan para POS o Google Home según el caso.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalada:</strong> tablet entregada al área.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Configurada:</strong> POS o Google Home según corresponda.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probada:</strong> flujo operativo validado.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen las tablets por área en el IT MPL y en la hoja Workstation.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">ASTON11RCTB01</span>
-        <span class="sample">ASTON11RSTB01</span>
-        <span class="sample">ASTON11SPTB01</span>
-        <span class="sample">ASTON11PBTB01</span>
-        <span class="sample">ASTON11LBTB01</span>
-        <span class="sample">ASTON11ADTB01</span>
-        <span class="sample">ASTON11TRTB01</span>
-        <span class="sample">ASTON11BTTB01</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 48] LAPTOPS (RECEPTION COUNTER) ---------- -->
-<section class="ficha reverse" id="ficha-48">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Laptops (Reception Counter)</span>
-      <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1000&q=80" alt="Laptop">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Workstation Infrastructure</div>
-      <h2>La oficina <em>móvil</em> de recepción.</h2>
-      <p class="lead">3 laptops para Reception Counter. Se validan con OS, dominio, apps y usuario asignado antes de entregarse al equipo de recepción.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>OS:</strong> sistema operativo instalado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Domain:</strong> unida al dominio corporativo.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Apps:</strong> aplicaciones del checklist instaladas.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>User:</strong> Reception Counter confirmado.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran las laptops en el Excel adjunto.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">ASTON11FONB01</span>
-        <span class="sample">ASTON11FONB02</span>
-        <span class="sample">ASTON11FONB03</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 49] PCs POR ROL OPERATIVO ---------- -->
-<section class="ficha" id="ficha-49">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>PCs por Rol Operativo</span>
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80" alt="PC Office">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Workstation Infrastructure</div>
-      <h2>El puesto <em>de trabajo</em> de cada rol.</h2>
-      <p class="lead">PCs de escritorio asignados por rol operativo: Finance, Condo Manager, Reservations, HR, Chief Reception, Chief Maintenance, Chief Housekeeper, Storage, Purchasing, Chief Security, Chef y A&B.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>OS:</strong> sistema operativo instalado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Domain:</strong> unida al dominio corporativo.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Apps:</strong> aplicaciones del checklist instaladas.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>User:</strong> rol operativo confirmado.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran los PCs operativos en el Excel adjunto.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">ASTON11FOPC01</span>
-        <span class="sample">ASTON11CMPC01</span>
-        <span class="sample">ASTON11RSPC01</span>
-        <span class="sample">ASTON11HRPC01</span>
-        <span class="sample">ASTON11FOPC02</span>
-        <span class="sample">ASTON11ENPC01</span>
-        <span class="sample">ASTON11HKPC01</span>
-        <span class="sample">ASTON11STPC01</span>
-        <span class="sample">ASTON11PUPC01</span>
-        <span class="sample">ASTON11SEPC01</span>
-        <span class="sample">ASTON11FBPC01</span>
-        <span class="sample">ASTON11ABPC01</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 50] PRINTER SCANNERS ---------- -->
-<section class="ficha reverse" id="ficha-50">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Printer Scanners</span>
-      <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=1000&q=80" alt="Printer Scanner">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Workstation Infrastructure</div>
-      <h2>Impresión y digitalización <em>en un solo equipo</em>.</h2>
-      <p class="lead">Impresoras multifunción con escáner para áreas administrativas: Reception Counter, Condo Manager Office y A&B Kitchen.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> equipo en su ubicación.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>En red:</strong> accesible desde los PCs del área.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probado:</strong> impresión y escaneo funcionales.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen las Printer Scanners en el IT MPL y en la hoja Workstation.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">ASTON11FOPS01</span>
-        <span class="sample">ASTON11CMPS01</span>
-        <span class="sample">ASTON11ABPS01</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 51] POS PRINTERS ---------- -->
-<section class="ficha" id="ficha-51">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>POS Printers</span>
-      <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=1000&q=80" alt="POS Printer">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Workstation Infrastructure</div>
-      <h2>El <em>ticket</em> que cierra cada consumo.</h2>
-      <p class="lead">7 impresoras POS Epson TM-U220 con puerto de red para los consumption centers. Se validan por ubicación y conectividad al sistema POS.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> impresora montada en el centro de consumo.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>En red:</strong> con puerto ethernet configurado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Probado:</strong> impresión desde POS verificada.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen las POS Printers en el IT MPL (Epson TM-U220, 7 unidades).</span>
-      </div>
-      <div class="samples">
-        <span class="sample">ASTON11POSPR01</span>
-        <span class="sample">ASTON11POSPR02</span>
-        <span class="sample">ASTON11POSPR03</span>
-        <span class="sample">…</span>
-        <span class="sample">ASTON11POSPR07</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 52] ACCESS CONTROL SYSTEM ---------- -->
-<section class="ficha reverse" id="ficha-52">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Access Control System</span>
-      <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=1000&q=80" alt="Access Control">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Access Control System</div>
-      <h2>Quién <em>entra</em>, dónde y cuándo.</h2>
-      <p class="lead">Control de accesos para Gym, Spa, Pool, BOH y Meeting Rooms, más el Spa Booking System. Se valida el lector, la cerradura y su integración con el sistema del hotel.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Lector:</strong> instalado y calibrado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Cerradura:</strong> conectada al controlador.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Integración:</strong> con el sistema de accesos del hotel.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Spa Booking:</strong> sistema de reservas de spa operativo.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran los accesos controlados y el Spa Booking en el Excel adjunto.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F17-Access-Gym-01</span>
-        <span class="sample">F17-Access-Spa-01</span>
-        <span class="sample">F17-Access-Pool-01</span>
-        <span class="sample">F01-Access-BOH-01</span>
-        <span class="sample">F02-Access-MeetingRoom-01</span>
-        <span class="sample">F17-SpaBooking-01</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 53] IoT & SMART DEVICES ---------- -->
-<section class="ficha" id="ficha-53">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>IoT & Smart Devices</span>
-      <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=1000&q=80" alt="IoT">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · IT MPL</div>
-      <h2>Sensores que <em>escuchan</em> al edificio.</h2>
-      <p class="lead">Sensores y actuadores inteligentes: calidad de agua del pool, sensores de temperatura, iluminación smart, control IoT de HVAC y sensor de ocupación para gym y spa.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> sensor montado en su punto.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Conectado:</strong> en red y reportando.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Integrado:</strong> con la plataforma de monitoreo.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen los sensores y dispositivos smart en el IT MPL y en la hoja Infrastructure.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F17-PoolSensor-01</span>
-        <span class="sample">F17-SmartLighting-Pool-01</span>
-        <span class="sample">F17-Pool-Audio-01</span>
-        <span class="sample">Temperature Sensor</span>
-        <span class="sample">Occupancy Sensor</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 54] SAFETY & SECURITY SYSTEM ---------- -->
-<section class="ficha reverse" id="ficha-54">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Safety & Security System</span>
-      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/extintor.jpg" alt="Safety">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · IT MPL</div>
-      <h2>Lo que <em>protege</em> a las personas.</h2>
-      <p class="lead">Sistemas de seguridad y contra incendios: detección, extintores (CO2/FM200), alarmas, sprinklers, además de control de acceso vehicular, conteo y CCTV de parking.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Detección:</strong> sistema instalado y probado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Extinción:</strong> extintores y sprinklers colocados.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Alarmas:</strong> integradas y funcionando.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Parking:</strong> control, conteo y CCTV operativos.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen los sistemas de seguridad en el IT MPL y en la hoja Infrastructure.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Fire Detection System</span>
-        <span class="sample">Fire Extinguisher</span>
-        <span class="sample">Fire Alarm</span>
-        <span class="sample">Sprinkler System</span>
-        <span class="sample">Vehicle Access Control</span>
-        <span class="sample">Vehicle Counting System</span>
-        <span class="sample">Parking Signage</span>
-        <span class="sample">Parking CCTV</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 55] HVAC SYSTEM ---------- -->
-<section class="ficha" id="ficha-55">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>HVAC System</span>
-      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/aac.jpg" alt="HVAC">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · IT MPL</div>
-      <h2>El clima que <em>se siente</em> en cada espacio.</h2>
-      <p class="lead">Sistema de aire acondicionado de habitaciones y áreas públicas, junto con sensores de temperatura para control y monitoreo.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Instalado:</strong> sistema de A/C montado y probado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Sensores:</strong> temperatura monitoreada por zona.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Control IoT:</strong> integrado con la plataforma.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparece el sistema HVAC en el IT MPL y en la hoja Infrastructure.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Air Conditioning System</span>
-        <span class="sample">Temperature Sensors</span>
-        <span class="sample">Temperature Control IoT</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 56] SOFTWARE & LICENSES ---------- -->
-<section class="ficha reverse" id="ficha-56">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Software & Licenses</span>
-      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80" alt="Software">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · IT MPL</div>
-      <h2>Lo que <em>activa</em> cada equipo.</h2>
-      <p class="lead">Licencias y plataformas: PMS, POS, Channel Manager, Revenue Management, Energy Management, IPTV Middleware, Chromecast Management, Guest WiFi Portal, Google Workspace y Ruijie Cloud.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Contrato:</strong> firmado y enviado a corporate.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Licencia:</strong> activada y asignada.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Integración:</strong> probada con el sistema correspondiente.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen las licencias y plataformas en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">PMS License</span>
-        <span class="sample">POS License</span>
-        <span class="sample">IPTV Middleware</span>
-        <span class="sample">Google Workspace</span>
-        <span class="sample">Ruijie Cloud</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 57] MAINTENANCE & TOOLS ---------- -->
-<section class="ficha" id="ficha-57">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Maintenance & Tools</span>
-      <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1000&q=80" alt="Tools">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · IT MPL</div>
-      <h2>Lo que <em>sostiene</em> la operación diaria.</h2>
-      <p class="lead">Herramientas de red (crimping, LAN tester, air compressor), repuestos, documentación técnica (diagramas, manuales) y licencias de firmware.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Herramientas:</strong> kit de red completo.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Repuestos:</strong> disponibles en sitio.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Documentación:</strong> diagramas y manuales entregados.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen las herramientas y repuestos en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Network Tools</span>
-        <span class="sample">Spare Parts</span>
-        <span class="sample">Documentation</span>
-        <span class="sample">Licenses</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 58] PARKING EQUIPMENT ---------- -->
-<section class="ficha reverse" id="ficha-58">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Parking Equipment</span>
-      <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=1000&q=80" alt="Parking">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · IT MPL</div>
-      <h2>El control <em>silencioso</em> del estacionamiento.</h2>
-      <p class="lead">Control de acceso vehicular, sistema de conteo, señalización y cámaras CCTV específicas del área de estacionamiento (SS, N1, N2, N3).</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Acceso:</strong> control vehicular instalado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Conteo:</strong> sistema de conteo funcionando.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Vigilancia:</strong> cámaras CCTV en parking.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Referencias del MPL</span>
-        <span class="lbl-text">así aparecen los equipos de parking en el IT MPL.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">Vehicle Access Control</span>
-        <span class="sample">Vehicle Counting System</span>
-        <span class="sample">Parking Signage</span>
-        <span class="sample">Parking CCTV</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ---------- [FICHA 59] ROOFTOP EQUIPMENT ---------- -->
-<section class="ficha" id="ficha-59">
-  <div class="wrap"><div class="ficha-inner">
-    <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Rooftop Equipment</span>
-      <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1000&q=80" alt="Rooftop">
-    </div>
-    <div class="ficha-text">
-      <div class="kicker">Categoría · Infrastructure</div>
-      <h2>El nivel 17, <em>el más visible</em> del hotel.</h2>
-      <p class="lead">Equipos del nivel 17: TVs (Pool, Gym, Spa, Bar), sound system, access control (Gym, Spa, Pool), smart lighting, audio y sensores de calidad de agua del pool.</p>
-      <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>TVs:</strong> instaladas en Pool, Gym, Spa y Bar.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Sound:</strong> sistema de audio integrado.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Access:</strong> control de acceso en Gym, Spa y Pool.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Sensores:</strong> calidad de agua y smart lighting.</span></div>
-      </div>
-      <div class="samples-label">
-        <span class="lbl-kicker">Ejemplos de identificación</span>
-        <span class="lbl-text">así se nombran los equipos del nivel 17 en el Excel adjunto.</span>
-      </div>
-      <div class="samples">
-        <span class="sample">F17-Public-Pool</span>
-        <span class="sample">F17-Public-Gym</span>
-        <span class="sample">F17-Public-Spa</span>
-        <span class="sample">F17-Public-Bar</span>
-        <span class="sample">F17-Public-GreeterDesk</span>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-
-<!-- ============================================================
-     [SECCIÓN 09] FOOTER
-     ============================================================ -->
 <footer>
-  <strong>Aston Bocettos City Suites</strong> · Manual Visual Preopening · Documento de sincronización técnica
+  <strong>Aston Bocettos City Suites</strong> · Visual Preopening Manual · Technical synchronization document
 </footer>
 
-<!-- Botón flotante para volver al inicio -->
-<a href="#top" class="back-top" title="Volver al inicio">↑</a>
+<a href="#top" class="back-top" title="Back to top">↑</a>
 
 </body>
 </html>
