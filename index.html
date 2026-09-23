@@ -2,106 +2,350 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Language Redirect</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirigiendo · Detección de idioma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
-      background: #f0f4f8;
+      background: linear-gradient(145deg, #f0f4f8 0%, #e6ecf3 100%);
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 40px 20px;
+      padding: 20px;
+      margin: 0;
     }
-    .voucher {
-      max-width: 600px;
+
+    .redirect-card {
+      max-width: 520px;
       width: 100%;
       background: #ffffff;
-      border-radius: 24px;
-      box-shadow: 0 20px 40px rgba(0, 20, 40, 0.15);
-      padding: 30px;
+      border-radius: 32px;
+      box-shadow: 0 20px 40px rgba(0, 20, 40, 0.12), 0 8px 20px rgba(0, 0, 0, 0.05);
+      padding: 40px 30px;
       text-align: center;
+      transition: all 0.2s ease;
     }
-    h1 {
-      font-size: 24px;
+
+    /* Círculo de progreso */
+    .progress-ring {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .ring {
+      width: 80px;
+      height: 80px;
+      position: relative;
+    }
+
+    .ring svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .ring circle {
+      fill: none;
+      stroke-width: 6;
+      stroke-linecap: round;
+      r: 36;
+      cx: 40;
+      cy: 40;
+    }
+
+    .ring .bg-circle {
+      stroke: #e2eaf2;
+    }
+
+    .ring .progress-circle {
+      stroke: #00b4ff;
+      stroke-dasharray: 226.2; /* 2πr ≈ 226.2 */
+      stroke-dashoffset: 226.2;
+      animation: progressFill 2.2s ease-out forwards;
+      transition: stroke-dashoffset 0.1s;
+    }
+
+    @keyframes progressFill {
+      0% {
+        stroke-dashoffset: 226.2;
+      }
+      70% {
+        stroke-dashoffset: 45.24; /* 20% restante */
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .ring .checkmark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 32px;
+      font-weight: 600;
+      color: #00b4ff;
+      opacity: 0;
+      animation: fadeInCheck 0.3s ease 2.2s forwards;
+    }
+
+    @keyframes fadeInCheck {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Texto dinámico */
+    .status-title {
+      font-size: 26px;
       font-weight: 800;
       color: #0b1a2e;
-      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      min-height: 2.2rem;
     }
-    p {
-      font-size: 15px;
-      color: #2d4055;
-      margin-bottom: 20px;
+
+    .status-sub {
+      font-size: 16px;
+      color: #4a5f77;
+      font-weight: 500;
+      margin-bottom: 24px;
+      min-height: 1.8rem;
     }
-    .links a {
+
+    /* Enlaces manuales */
+    .fallback-links {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      border-top: 1px solid #e2eaf2;
+      padding-top: 24px;
+    }
+
+    .fallback-links a {
       display: inline-block;
-      margin: 8px;
-      padding: 12px 24px;
-      border-radius: 20px;
+      padding: 10px 22px;
+      border-radius: 40px;
       text-decoration: none;
       font-weight: 600;
-      transition: all 0.25s ease;
+      font-size: 14px;
+      transition: all 0.2s ease;
     }
+
     .btn-es {
       background: #00b4ff;
       color: white;
+      box-shadow: 0 4px 12px rgba(0, 180, 255, 0.25);
     }
     .btn-es:hover {
       background: #0099dd;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(0, 180, 255, 0.35);
     }
+
     .btn-en {
       background: #eef2f6;
       color: #0b1a2e;
     }
     .btn-en:hover {
       background: #d9e2ec;
+      transform: translateY(-1px);
     }
-    .counter {
-      font-size: 14px;
-      color: #4a5f77;
-      margin-top: 15px;
+
+    .btn-in {
+      background: #f0eef6;
+      color: #1e1a2e;
+    }
+    .btn-in:hover {
+      background: #e0d9ec;
+      transform: translateY(-1px);
+    }
+
+    .note {
+      font-size: 13px;
+      color: #7a8b9f;
+      margin-top: 16px;
+      font-weight: 400;
+    }
+
+    /* Ajuste responsive */
+    @media (max-width: 480px) {
+      .redirect-card {
+        padding: 28px 18px;
+      }
+      .status-title {
+        font-size: 22px;
+      }
+      .fallback-links a {
+        padding: 8px 16px;
+        font-size: 13px;
+      }
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var userLang = navigator.language || navigator.userLanguage;
-      userLang = userLang.toLowerCase();
-      var targetUrl = userLang.startsWith("es") ? "index-es.html" : "index-en.html";
-
-      // Intento redirigir
-      try {
-        window.location.href = targetUrl;
-      } catch (e) {
-        // Si no redirige, muestro enlaces y contador
-        var countdown = 3;
-        var counterEl = document.getElementById("counter");
-        counterEl.textContent = countdown;
-        var interval = setInterval(function() {
-          countdown--;
-          counterEl.textContent = countdown;
-          if (countdown <= 0) {
-            clearInterval(interval);
-            window.location.href = targetUrl;
-          }
-        }, 1000);
-        document.getElementById("links").style.display = "block";
-      }
-    });
-  </script>
 </head>
 <body>
-  <div class="voucher">
-    <h1>Language Detection</h1>
-    <p>Detectando idioma de la sesión...</p>
-    <div id="links" style="display:none;">
-      <p>Accede manualmente si no se redirige:</p>
-      <div class="links">
-        <a href="index-es.html" class="btn-es">Versión en Español</a>
-        <a href="index-en.html" class="btn-en">English Version</a>
+  <div class="redirect-card">
+    <!-- Círculo de progreso animado -->
+    <div class="progress-ring">
+      <div class="ring">
+        <svg viewBox="0 0 80 80">
+          <circle class="bg-circle" cx="40" cy="40" r="36" />
+          <circle class="progress-circle" cx="40" cy="40" r="36" />
+        </svg>
+        <div class="checkmark">✓</div>
       </div>
-      <div class="counter">Redirección automática en <span id="counter"></span> segundos...</div>
     </div>
+
+    <!-- Mensaje dinámico según el idioma detectado -->
+    <div class="status-title" id="statusTitle">Detecting language...</div>
+    <div class="status-sub" id="statusSub">Please wait a moment</div>
+
+    <!-- Enlaces de respaldo (se muestran siempre, pero con opacidad reducida) -->
+    <div class="fallback-links" id="fallbackLinks">
+      <a href="index-es.html" class="btn-es" lang="es">Español</a>
+      <a href="index-en.html" class="btn-en" lang="en">English</a>
+      <a href="index-in.html" class="btn-in" lang="hi">हिन्दी</a>
+    </div>
+    <div class="note">Serás redirigido automáticamente</div>
   </div>
+
+  <script>
+    (function() {
+      // --- Configuración de idiomas y URLs ---
+      const LANG_MAP = {
+        es: {
+          url: 'index-es.html',
+          title: 'Detectando idioma…',
+          sub: 'Redirigiendo a la versión en español',
+          manual: 'Español'
+        },
+        en: {
+          url: 'index-en.html',
+          title: 'Detecting language…',
+          sub: 'Redirecting to English version',
+          manual: 'English'
+        },
+        hi: {
+          url: 'index-in.html',
+          title: 'भाषा का पता लगाया जा रहा है…',
+          sub: 'हिंदी संस्करण पर रीडायरेक्ट किया जा रहा है',
+          manual: 'हिन्दी'
+        }
+      };
+
+      const DEFAULT_LANG = 'en'; // inglés por defecto
+
+      // --- Detección de idioma ---
+      function detectLanguage() {
+        // 1. Intentar con navigator.language (ej: "es-ES", "en-US", "hi-IN")
+        let navLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        
+        // 2. Si navigator.languages está disponible, revisar todas las preferencias
+        if (navigator.languages && navigator.languages.length) {
+          for (let lang of navigator.languages) {
+            const code = lang.toLowerCase().split('-')[0];
+            if (code === 'es' || code === 'en' || code === 'hi') {
+              return code;
+            }
+          }
+        }
+        
+        // 3. Extraer código base de navigator.language
+        const baseCode = navLang.split('-')[0];
+        if (baseCode === 'es' || baseCode === 'en' || baseCode === 'hi') {
+          return baseCode;
+        }
+        
+        // 4. Si no coincide con es, en, hi → inglés por defecto
+        return DEFAULT_LANG;
+      }
+
+      // --- Obtener referencias del DOM ---
+      const statusTitle = document.getElementById('statusTitle');
+      const statusSub = document.getElementById('statusSub');
+      const fallbackLinks = document.getElementById('fallbackLinks');
+      const progressCircle = document.querySelector('.progress-circle');
+      
+      // --- Detectar idioma y preparar redirección ---
+      const detectedLang = detectLanguage();
+      const langConfig = LANG_MAP[detectedLang] || LANG_MAP[DEFAULT_LANG];
+      const targetUrl = langConfig.url;
+
+      // Actualizar textos según idioma detectado
+      statusTitle.textContent = langConfig.title;
+      statusSub.textContent = langConfig.sub;
+
+      // Ajustar el título de la página según idioma
+      document.title = `🌐 ${langConfig.title}`;
+
+      // Opcional: resaltar el enlace del idioma detectado (buena práctica de UX)
+      const links = fallbackLinks.querySelectorAll('a');
+      links.forEach(link => {
+        if (link.getAttribute('href') === targetUrl) {
+          link.style.boxShadow = '0 0 0 3px rgba(0, 180, 255, 0.3)';
+          link.style.fontWeight = '700';
+        } else {
+          link.style.boxShadow = 'none';
+          link.style.fontWeight = '600';
+        }
+      });
+
+      // --- Redirección después de la animación ---
+      // Esperamos 2.4 segundos para que se complete la animación del círculo (2.2s + margen)
+      const REDIRECT_DELAY = 2400;
+
+      // Mostrar siempre los enlaces manuales (por si acaso), pero ya se ven
+      // Si el usuario quiere hacer clic manualmente, los enlaces están activos.
+      
+      // Redirección suave después de un tiempo
+      const redirectTimer = setTimeout(() => {
+        // Pequeña comprobación para evitar redirigir si el usuario ya navegó manualmente
+        if (!document.hidden) {
+          window.location.href = targetUrl;
+        }
+      }, REDIRECT_DELAY);
+
+      // Si el usuario hace clic en algún enlace, cancelamos la redirección automática
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          clearTimeout(redirectTimer);
+          // Permitimos que el enlace funcione normalmente
+        });
+      });
+
+      // Opcional: si la página se vuelve visible de nuevo (por ejemplo, el usuario volvió atrás),
+      // podríamos reiniciar, pero no es necesario.
+      
+      // Pequeño detalle: para navegadores que no soportan animaciones, igual redirige.
+      // Aseguramos que el círculo mantenga su estado final.
+      // (La animación CSS se encarga)
+
+      // Si por alguna razón el idioma no está en el mapa, forzamos inglés
+      if (!LANG_MAP[detectedLang]) {
+        // Redirigir a inglés explícitamente
+        console.warn('Idioma no soportado, redirigiendo a inglés por defecto.');
+        // La configuración ya usa DEFAULT_LANG = 'en'
+        // Pero por si acaso, forzamos:
+        if (targetUrl !== 'index-en.html') {
+          window.location.href = 'index-en.html';
+        }
+      }
+
+      // Pequeña mejora: actualizar el atributo lang del documento
+      document.documentElement.lang = detectedLang === 'hi' ? 'hi' : detectedLang;
+    })();
+  </script>
 </body>
 </html>
