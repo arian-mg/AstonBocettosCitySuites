@@ -6,24 +6,398 @@
 <title>Manual Visual · Preopening Aston Bocettos City Suites</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --ink:#0b1f33;
+    --deep:#0e2f4f;
+    --sea:#1e6b8c;
+    --sky:#cfe6f2;
+    --sand:#f6efe4;
+    --gold:#c89b3c;
+    --mist:#f4f8fb;
+    --coral:#d96b5a;
+  }
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--mist);
+    color:var(--ink);
+    line-height:1.65;
+    overflow-x:hidden;
+  }
+
+  /* ============ HERO ============ */
+  .hero{
+    min-height:100vh;
+    background:
+      linear-gradient(180deg,rgba(11,31,51,.82) 0%,rgba(14,47,79,.85) 60%,rgba(11,31,51,.95) 100%),
+      url('https://arian-mg.github.io/AstonBocettosCitySuites/img/lobby.jpg') center/cover;
+    color:#fff;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;padding:6rem 2rem 4rem;position:relative;
+  }
+  .hero::after{
+    content:"";position:absolute;bottom:0;left:0;right:0;height:120px;
+    background:linear-gradient(180deg,transparent,var(--mist));
+  }
+  .hero .eyebrow{
+    font-size:.78rem;letter-spacing:.35em;text-transform:uppercase;
+    color:#9cc7dc;margin-bottom:1.5rem;font-weight:500;
+  }
+  .hero h1{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:clamp(2.4rem,6vw,5rem);line-height:1.02;
+    letter-spacing:-.03em;max-width:900px;margin-bottom:1.5rem;
+  }
+  .hero h1 em{font-style:italic;color:var(--gold);}
+  .hero p{
+    font-size:clamp(1rem,1.5vw,1.15rem);max-width:700px;
+    color:#c8dbe8;font-weight:300;margin-bottom:.8rem;
+  }
+  .hero p a{
+    color:var(--gold);text-decoration:underline;text-underline-offset:3px;
+    font-weight:500;
+  }
+  .hero p a:hover{color:#e0b155;}
+  .hero .meta{margin-top:3rem;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;}
+  .hero .chip{
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+    backdrop-filter:blur(10px);padding:.5rem 1.1rem;border-radius:60px;
+    font-size:.82rem;font-weight:500;color:#e4eef6;
+  }
+  .scroll-cue{
+    position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);
+    color:#9cc7dc;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;
+    animation:bob 2.4s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,10px);}}
+
+  /* ============ LAYOUT ============ */
+  .wrap{max-width:1200px;margin:0 auto;padding:0 2rem;}
+  @media(max-width:640px){.wrap{padding:0 1.2rem;}}
+
   /* ============================================================
-     ESTILOS IDÉNTICOS — Solo cambian los textos
-     Copia exactamente el mismo <style> de la versión original en español
+     [GAYA] INDEKS NAVIGASI
      ============================================================ */
+  .index{
+    background:linear-gradient(180deg,var(--deep) 0%,#0a2540 100%);
+    padding:6rem 0 5rem;color:#fff;position:relative;overflow:hidden;
+  }
+  .index::before{
+    content:"";position:absolute;top:-30%;left:-10%;
+    width:600px;height:600px;border-radius:50%;
+    background:radial-gradient(circle,rgba(200,155,60,.12),transparent 70%);
+  }
+  .index::after{
+    content:"";position:absolute;bottom:-30%;right:-10%;
+    width:600px;height:600px;border-radius:50%;
+    background:radial-gradient(circle,rgba(30,107,140,.2),transparent 70%);
+  }
+  .index-head{text-align:center;margin-bottom:3.5rem;position:relative;z-index:1;}
+  .index-head .kicker{
+    font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:1rem;
+  }
+  .index-head h2{
+    font-family:'Fraunces',serif;font-size:clamp(1.9rem,4vw,2.8rem);
+    font-weight:600;letter-spacing:-.02em;line-height:1.1;margin-bottom:.8rem;
+  }
+  .index-head h2 em{font-style:italic;color:var(--gold);}
+  .index-head p{color:#9cbcd2;font-size:.95rem;max-width:620px;margin:0 auto;}
+
+  .index-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;
+    position:relative;z-index:1;
+  }
+  @media(max-width:900px){.index-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
+  @media(max-width:600px){.index-grid{grid-template-columns:1fr;gap:1.5rem;}}
+
+  .index-group h3{
+    font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:1rem;
+    padding-bottom:.6rem;border-bottom:1px solid rgba(200,155,60,.25);
+    display:flex;align-items:center;gap:.5rem;
+  }
+  .index-group h3 .num{
+    background:rgba(200,155,60,.15);padding:.1rem .5rem;border-radius:40px;
+    font-size:.65rem;color:var(--gold);
+  }
+  .index-group ul{list-style:none;display:flex;flex-direction:column;gap:.15rem;}
+  .index-group a{
+    display:flex;justify-content:space-between;align-items:center;gap:1rem;
+    padding:.5rem .7rem;border-radius:.5rem;
+    color:#c8dbe8;text-decoration:none;font-size:.88rem;
+    transition:.2s;border:1px solid transparent;
+  }
+  .index-group a:hover{
+    background:rgba(200,155,60,.08);color:#fff;
+    border-color:rgba(200,155,60,.25);
+    transform:translateX(3px);
+  }
+  .index-group a .id{
+    font-family:'SF Mono','Fira Code',monospace;
+    font-size:.72rem;color:var(--gold);opacity:.7;font-weight:500;
+  }
+  .index-group a:hover .id{opacity:1;}
+
+  /* ============ INTRO ============ */
+  .intro{
+    padding:6rem 0 4rem;display:grid;grid-template-columns:1.1fr 1fr;
+    gap:4rem;align-items:center;
+  }
+  @media(max-width:900px){.intro{grid-template-columns:1fr;gap:2rem;padding:4rem 0 3rem;}}
+  .intro-text h2{
+    font-family:'Fraunces',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);
+    font-weight:600;line-height:1.15;letter-spacing:-.02em;color:var(--deep);
+    margin-bottom:1.5rem;
+  }
+  .intro-text p{color:#3a4f63;font-size:1.05rem;margin-bottom:1.1rem;}
+  .intro-text p strong{color:var(--deep);font-weight:600;}
+  .intro-visual{
+    position:relative;border-radius:2rem;overflow:hidden;aspect-ratio:4/5;
+    box-shadow:0 30px 60px -20px rgba(11,31,51,.35);
+  }
+  .intro-visual img{width:100%;height:100%;object-fit:cover;display:block;}
+  .intro-visual .badge{
+    position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;
+    background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
+    border-radius:1.2rem;padding:1.1rem 1.3rem;
+  }
+  .intro-visual .badge strong{display:block;color:var(--deep);font-size:.95rem;margin-bottom:.2rem;}
+  .intro-visual .badge span{color:#5b6f84;font-size:.82rem;}
+
+  /* ============ ALUR ============ */
+  .flow{background:#fff;padding:6rem 0;}
+  .flow-head{text-align:center;margin-bottom:4rem;}
+  .flow-head .kicker{
+    font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;
+    color:var(--sea);font-weight:600;margin-bottom:1rem;
+  }
+  .flow-head h2{
+    font-family:'Fraunces',serif;font-size:clamp(1.9rem,4vw,3rem);
+    font-weight:600;letter-spacing:-.02em;color:var(--deep);line-height:1.1;
+  }
+  .flow-head h2 em{font-style:italic;color:var(--gold);}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+  @media(max-width:900px){.steps{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.steps{grid-template-columns:1fr;}}
+  .step{
+    background:var(--mist);border-radius:1.5rem;padding:1.8rem 1.5rem;
+    transition:transform .3s,box-shadow .3s;border:1px solid #e2ebf3;
+  }
+  .step:hover{transform:translateY(-6px);box-shadow:0 20px 40px -15px rgba(11,31,51,.15);}
+  .step .n{
+    font-family:'Fraunces',serif;font-size:3rem;font-weight:600;
+    color:var(--sky);line-height:1;margin-bottom:.8rem;display:block;
+  }
+  .step h3{font-size:1rem;font-weight:600;color:var(--deep);margin-bottom:.5rem;}
+  .step p{font-size:.88rem;color:#5b6f84;line-height:1.6;}
+
+  /* ============ PROGRES / CARA MEMPERBARUI ============ */
+  .progress-block{
+    background:#fff;padding:5rem 0;
+  }
+  .progress-inner{
+    max-width:900px;margin:0 auto;text-align:center;
+  }
+  .progress-inner .kicker{
+    font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;
+    color:var(--sea);font-weight:600;margin-bottom:1rem;
+  }
+  .progress-inner h2{
+    font-family:'Fraunces',serif;font-size:clamp(1.8rem,3.6vw,2.6rem);
+    font-weight:600;letter-spacing:-.02em;color:var(--deep);
+    line-height:1.15;margin-bottom:1.5rem;
+  }
+  .progress-inner h2 em{font-style:italic;color:var(--gold);}
+  .progress-inner p{
+    color:#3a4f63;font-size:1.05rem;line-height:1.7;margin-bottom:1rem;
+  }
+  .progress-inner p strong{color:var(--deep);font-weight:600;}
+  .progress-inner .pill{
+    display:inline-flex;align-items:center;gap:.4rem;
+    background:var(--mist);border:1px solid #e2ebf3;
+    padding:.35rem .9rem;border-radius:60px;
+    font-size:.82rem;font-weight:600;color:var(--sea);
+    margin:0 .2rem;
+  }
+
+  /* ============ KARTU ============ */
+  .ficha{padding:5rem 0;scroll-margin-top:2rem;}
+  .ficha:nth-child(even){background:#fff;}
+  .ficha-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+  .ficha.reverse .ficha-inner{direction:rtl;}
+  .ficha.reverse .ficha-inner > *{direction:ltr;}
+  @media(max-width:900px){
+    .ficha-inner{grid-template-columns:1fr;gap:2rem;}
+    .ficha.reverse .ficha-inner{direction:ltr;}
+  }
+  .ficha-visual{
+    position:relative;border-radius:2rem;overflow:hidden;
+    aspect-ratio:1/1;box-shadow:0 30px 60px -25px rgba(11,31,51,.3);
+  }
+  .ficha-visual img{width:100%;height:100%;object-fit:cover;display:block;}
+  .ficha-visual .tag{
+    position:absolute;top:1.3rem;left:1.3rem;
+    background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
+    padding:.5rem 1.1rem;border-radius:60px;
+    font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--deep);display:flex;align-items:center;gap:.5rem;
+  }
+  .ficha-visual .tag .dot{width:8px;height:8px;border-radius:50%;background:var(--coral);}
+  .ficha-text .kicker{
+    font-size:.72rem;letter-spacing:.35em;text-transform:uppercase;
+    color:var(--sea);font-weight:600;margin-bottom:1rem;
+  }
+  .ficha-text h2{
+    font-family:'Fraunces',serif;font-size:clamp(1.7rem,3.2vw,2.4rem);
+    font-weight:600;letter-spacing:-.02em;color:var(--deep);
+    line-height:1.1;margin-bottom:1.2rem;
+  }
+  .ficha-text h2 em{font-style:italic;color:var(--gold);}
+  .ficha-text .lead{font-size:1.02rem;color:#3a4f63;margin-bottom:1.5rem;}
+  .ficha-text .lead strong{color:var(--deep);font-weight:600;}
+  .checks{display:flex;flex-direction:column;gap:.7rem;margin-bottom:1.5rem;}
+  .check{display:flex;gap:.8rem;align-items:flex-start;font-size:.94rem;color:#3a4f63;}
+  .check .box{
+    width:22px;height:22px;border-radius:6px;background:var(--sky);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+    margin-top:.15rem;color:var(--deep);font-size:.7rem;font-weight:700;
+  }
+  .check strong{color:var(--deep);font-weight:600;}
+  .samples{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:0;}
+  .sample{
+    font-family:'SF Mono','Fira Code',monospace;font-size:.76rem;
+    background:var(--sand);color:var(--deep);padding:.4rem .8rem;
+    border-radius:8px;border:1px solid #e8ddc9;font-weight:500;
+  }
+
+  /* --- Header untuk chip contoh --- */
+  .samples-label{
+    display:flex;align-items:center;gap:.75rem;
+    margin-top:1.5rem;margin-bottom:.7rem;padding-top:1rem;
+    border-top:1px solid #e8ddc9;
+  }
+  .samples-label .lbl-kicker{
+    font-family:'SF Mono','Fira Code',monospace;
+    font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--gold);font-weight:700;white-space:nowrap;
+  }
+  .samples-label .lbl-text{
+    font-size:.78rem;color:#7a8a9c;font-style:italic;line-height:1.4;
+  }
+  @media(max-width:600px){
+    .samples-label{flex-direction:column;align-items:flex-start;gap:.3rem;}
+  }
+
+  /* ============ LEGENDA ============ */
+  .legend{
+    background:var(--deep);color:#fff;border-radius:2rem;
+    padding:4rem 3rem;margin:4rem 0;
+  }
+  @media(max-width:640px){.legend{padding:2.5rem 1.5rem;border-radius:1.5rem;}}
+  .legend h3{
+    font-family:'Fraunces',serif;font-size:clamp(1.5rem,3vw,2rem);
+    font-weight:600;letter-spacing:-.02em;margin-bottom:.6rem;
+  }
+  .legend h3 em{font-style:italic;color:var(--gold);}
+  .legend .sub{color:#9cbcd2;margin-bottom:2.5rem;font-size:.95rem;}
+  .legend-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+  @media(max-width:900px){.legend-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.legend-grid{grid-template-columns:1fr;}}
+  .legend-col h4{
+    font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:1rem;font-weight:600;
+  }
+  .legend-col ul{list-style:none;}
+  .legend-col li{
+    display:flex;justify-content:space-between;gap:1rem;
+    padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.08);
+    font-size:.88rem;color:#c8dbe8;
+  }
+  .legend-col li span:first-child{
+    font-family:'SF Mono','Fira Code',monospace;color:#fff;font-weight:500;
+  }
+
+  /* ============ SINKRONISASI EMAIL ============ */
+  .sync{
+    background:linear-gradient(135deg,#1e6b8c 0%,#0e2f4f 100%);
+    border-radius:2rem;padding:4rem 3rem;color:#fff;
+    margin:0 0 4rem;position:relative;overflow:hidden;text-align:center;
+  }
+  @media(max-width:640px){.sync{padding:2.5rem 1.5rem;border-radius:1.5rem;}}
+  .sync::before{
+    content:"";position:absolute;top:-40%;right:-10%;
+    width:500px;height:500px;border-radius:50%;
+    background:radial-gradient(circle,rgba(200,155,60,.25),transparent 70%);
+  }
+  .sync h2{
+    font-family:'Fraunces',serif;font-size:clamp(1.7rem,3.5vw,2.5rem);
+    font-weight:600;letter-spacing:-.02em;margin-bottom:1rem;position:relative;
+  }
+  .sync h2 em{font-style:italic;color:var(--gold);}
+  .sync > p{
+    color:#c8dbe8;max-width:640px;margin:0 auto 2rem;position:relative;
+    font-size:1rem;line-height:1.7;
+  }
+  .sync .email-card{
+    position:relative;display:inline-flex;flex-direction:column;align-items:center;
+    gap:1rem;background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(10px);
+    border-radius:1.5rem;padding:2rem 2.5rem;max-width:600px;margin:0 auto;
+  }
+  .sync .email-card .label{
+    font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;
+    color:#9cc7dc;font-weight:600;
+  }
+  .sync .email-card .addr{
+    font-family:'SF Mono','Fira Code',monospace;
+    font-size:1rem;color:#fff;font-weight:500;word-break:break-all;
+  }
+  .sync .btn-mail{
+    display:inline-flex;align-items:center;gap:.6rem;
+    background:var(--gold);color:var(--deep);
+    padding:1rem 2rem;border-radius:1rem;
+    font-weight:700;font-size:1rem;text-decoration:none;
+    transition:.25s;
+  }
+  .sync .btn-mail:hover{background:#e0b155;transform:translateY(-2px);}
+  .sync .hint{font-size:.8rem;color:#9cbcd2;margin-top:1rem;position:relative;}
+
+  /* ============ TOMBOL KEMBALI KE ATAS ============ */
+  .back-top{
+    position:fixed;bottom:2rem;right:2rem;
+    width:52px;height:52px;border-radius:50%;
+    background:var(--deep);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    text-decoration:none;font-size:1.1rem;
+    box-shadow:0 10px 25px -8px rgba(11,31,51,.5);
+    transition:.25s;z-index:100;
+    border:1px solid rgba(200,155,60,.3);
+  }
+  .back-top:hover{background:var(--gold);color:var(--deep);transform:translateY(-3px);}
+
+  /* ============ FOOTER ============ */
+  footer{text-align:center;padding:3rem 2rem;color:#7a8a9c;font-size:.85rem;}
+  footer strong{color:var(--deep);font-weight:600;}
 </style>
 </head>
 <body id="top">
 
+<!-- ============================================================
+     [BAGIAN 01] HERO UTAMA
+     ============================================================ -->
 <header class="hero">
-  <div class="eyebrow">Manual Pre-Opening</div>
+  <div class="eyebrow">Manual Pra-Pembukaan</div>
   <h1>Aston Bocettos<br><em>City Suites</em></h1>
+
   <p>
     <a href="https://docs.google.com/spreadsheets/d/1qqrbIBgKvcFGtMlgfIDPlRoouRmw-aiG8OlXaoyIveM/edit?gid=1346872997#gid=1346872997" target="_blank">
-      Checklist Preopening (dokumen terlampir)
+      Checklist pra-pembukaan (dokumen terlampir)
     </a>
   </p>
   <div class="meta">
-    <span class="chip">📎 Excel terlampir · 7 sheet</span>
+    <span class="chip">📎 Excel terlampir · 7 lembar</span>
     <span class="chip">🏨 126 kamar</span>
     <span class="chip">📡 137 Access Point</span>
     <span class="chip">🎯 1 Jun 2026</span>
@@ -31,18 +405,25 @@
   <div class="scroll-cue">↓ Gulir untuk memulai</div>
 </header>
 
+
+<!-- ============================================================
+     [BAGIAN 02] INDEKS NAVIGASI
+     ============================================================ -->
 <section class="index">
   <div class="wrap">
     <div class="index-head">
       <div class="kicker">Navigasi</div>
-      <h2>Indeks kategori <em>lengkap</em>.</h2>
-      <p>Beberapa kategori disusun berdasarkan grup. Klik kategori yang perlu Anda perbarui untuk langsung melompat ke bagiannya dan mengakses kartu yang menjelaskan cara mengisi Excel serta arti setiap kolom.</p>
+      <h2>Indeks <em>lengkap</em> kategori.</h2>
+      <p>Beberapa kategori diatur berdasarkan grup. Klik kategori yang perlu Anda perbarui untuk melompat langsung ke bagian yang sesuai dan mengakses kartu yang menjelaskan cara mengisi Excel dan arti setiap kolom.</p>
     </div>
+
     <div class="index-grid">
+
+      <!-- GRUP: JARINGAN & KONEKTIVITAS -->
       <div class="index-group">
         <h3>Jaringan & Konektivitas <span class="num">07</span></h3>
         <ul>
-          <li><a href="#ficha-01">Access Points (AP) <span class="id">01</span></a></li>
+          <li><a href="#ficha-01">Access Point (AP) <span class="id">01</span></a></li>
           <li><a href="#ficha-02">Distribution Switch <span class="id">02</span></a></li>
           <li><a href="#ficha-03">Core Switch <span class="id">03</span></a></li>
           <li><a href="#ficha-04">Firewall <span class="id">04</span></a></li>
@@ -51,21 +432,25 @@
           <li><a href="#ficha-07">Portal WiFi <span class="id">07</span></a></li>
         </ul>
       </div>
+
+      <!-- GRUP: KABEL TERSTRUKTUR -->
       <div class="index-group">
-        <h3>Pengkabelan Terstruktur <span class="num">06</span></h3>
+        <h3>Kabel Terstruktur <span class="num">06</span></h3>
         <ul>
-          <li><a href="#ficha-08">Cabling <span class="id">08</span></a></li>
+          <li><a href="#ficha-08">Pengkabelan <span class="id">08</span></a></li>
           <li><a href="#ficha-09">Cat6 / Cat6a <span class="id">09</span></a></li>
           <li><a href="#ficha-10">Fiber Optic <span class="id">10</span></a></li>
           <li><a href="#ficha-11">Patch Cord <span class="id">11</span></a></li>
           <li><a href="#ficha-12">Faceplate & Jack <span class="id">12</span></a></li>
-          <li><a href="#ficha-13">Cable Management <span class="id">13</span></a></li>
+          <li><a href="#ficha-13">Manajemen Kabel <span class="id">13</span></a></li>
         </ul>
       </div>
+
+      <!-- GRUP: RAK & DISTRIBUSI -->
       <div class="index-group">
-        <h3>Rack & Distribusi <span class="num">06</span></h3>
+        <h3>Rak & Distribusi <span class="num">06</span></h3>
         <ul>
-          <li><a href="#ficha-14">Rack <span class="id">14</span></a></li>
+          <li><a href="#ficha-14">Rak <span class="id">14</span></a></li>
           <li><a href="#ficha-15">Patch Panel <span class="id">15</span></a></li>
           <li><a href="#ficha-16">Wiring Management <span class="id">16</span></a></li>
           <li><a href="#ficha-17">OTB / ODF Fiber Optic <span class="id">17</span></a></li>
@@ -73,8 +458,10 @@
           <li><a href="#ficha-19">Media Converter <span class="id">19</span></a></li>
         </ul>
       </div>
+
+      <!-- GRUP: DAYA -->
       <div class="index-group">
-        <h3>Daya & Backup <span class="num">04</span></h3>
+        <h3>Daya & Cadangan <span class="num">04</span></h3>
         <ul>
           <li><a href="#ficha-20">UPS <span class="id">20</span></a></li>
           <li><a href="#ficha-21">PDU <span class="id">21</span></a></li>
@@ -82,6 +469,8 @@
           <li><a href="#ficha-23">UPS Klien <span class="id">23</span></a></li>
         </ul>
       </div>
+
+      <!-- GRUP: CCTV -->
       <div class="index-group">
         <h3>CCTV & Pengawasan <span class="num">04</span></h3>
         <ul>
@@ -91,71 +480,87 @@
           <li><a href="#ficha-27">Hard Disk (NVR) <span class="id">27</span></a></li>
         </ul>
       </div>
+
+      <!-- GRUP: TELEVISI -->
       <div class="index-group">
         <h3>Televisi & Layar <span class="num">06</span></h3>
         <ul>
           <li><a href="#ficha-28">TV Kamar <span class="id">28</span></a></li>
-          <li><a href="#ficha-29">Bracket TV <span class="id">29</span></a></li>
+          <li><a href="#ficha-29">Braket TV <span class="id">29</span></a></li>
           <li><a href="#ficha-30">TV Area Publik <span class="id">30</span></a></li>
           <li><a href="#ficha-31">Digital Signage <span class="id">31</span></a></li>
-          <li><a href="#ficha-32">Chromecast Built-in <span class="id">32</span></a></li>
+          <li><a href="#ficha-32">Chromecast Bawaan <span class="id">32</span></a></li>
           <li><a href="#ficha-33">Platform ArchTV <span class="id">33</span></a></li>
         </ul>
       </div>
+
+      <!-- GRUP: KOMUNIKASI -->
       <div class="index-group">
         <h3>Komunikasi <span class="num">04</span></h3>
         <ul>
           <li><a href="#ficha-34">Telepon SIP <span class="id">34</span></a></li>
           <li><a href="#ficha-35">PABX <span class="id">35</span></a></li>
-          <li><a href="#ficha-36">Operator Console <span class="id">36</span></a></li>
+          <li><a href="#ficha-36">Konsol Operator <span class="id">36</span></a></li>
           <li><a href="#ficha-37">Outlet Telepon <span class="id">37</span></a></li>
         </ul>
       </div>
+
+      <!-- GRUP: KAMAR -->
       <div class="index-group">
         <h3>Kamar <span class="num">05</span></h3>
         <ul>
-          <li><a href="#ficha-38">Samsung Galaxy Tab (In-Room) <span class="id">38</span></a></li>
-          <li><a href="#ficha-39">Door Lock <span class="id">39</span></a></li>
-          <li><a href="#ficha-40">Key Card <span class="id">40</span></a></li>
-          <li><a href="#ficha-41">Encoder Key Card <span class="id">41</span></a></li>
+          <li><a href="#ficha-38">Samsung Galaxy Tab (Dalam Kamar) <span class="id">38</span></a></li>
+          <li><a href="#ficha-39">Kunci Pintu <span class="id">39</span></a></li>
+          <li><a href="#ficha-40">Kartu Kunci <span class="id">40</span></a></li>
+          <li><a href="#ficha-41">Encoder Kartu Kunci <span class="id">41</span></a></li>
           <li><a href="#ficha-42">PC Key Station <span class="id">42</span></a></li>
         </ul>
       </div>
+
+      <!-- GRUP: RUANG RAPAT -->
       <div class="index-group">
-        <h3>Ruang Meeting <span class="num">04</span></h3>
+        <h3>Ruang Rapat <span class="num">04</span></h3>
         <ul>
-          <li><a href="#ficha-43">Peralatan Ruang Meeting <span class="id">43</span></a></li>
-          <li><a href="#ficha-44">Audio Ruang Meeting <span class="id">44</span></a></li>
-          <li><a href="#ficha-45">Proyeksi Ruang Meeting <span class="id">45</span></a></li>
-          <li><a href="#ficha-46">Evakuasi Ruang Meeting <span class="id">46</span></a></li>
+          <li><a href="#ficha-43">Peralatan Ruang Rapat <span class="id">43</span></a></li>
+          <li><a href="#ficha-44">Audio Ruang Rapat <span class="id">44</span></a></li>
+          <li><a href="#ficha-45">Proyeksi Ruang Rapat <span class="id">45</span></a></li>
+          <li><a href="#ficha-46">Evakuasi Ruang Rapat <span class="id">46</span></a></li>
         </ul>
       </div>
+
+      <!-- GRUP: ENDPOINT -->
       <div class="index-group">
         <h3>Endpoint & Workstation <span class="num">05</span></h3>
         <ul>
           <li><a href="#ficha-47">Tablet (Per Area) <span class="id">47</span></a></li>
-          <li><a href="#ficha-48">Laptop (Reception Counter) <span class="id">48</span></a></li>
+          <li><a href="#ficha-48">Laptop (Meja Resepsionis) <span class="id">48</span></a></li>
           <li><a href="#ficha-49">PC per Peran Operasional <span class="id">49</span></a></li>
           <li><a href="#ficha-50">Printer Scanner <span class="id">50</span></a></li>
           <li><a href="#ficha-51">Printer POS <span class="id">51</span></a></li>
         </ul>
       </div>
+
+      <!-- GRUP: KEAMANAN & IoT -->
       <div class="index-group">
         <h3>Keamanan & IoT <span class="num">04</span></h3>
         <ul>
-          <li><a href="#ficha-52">Access Control System <span class="id">52</span></a></li>
-          <li><a href="#ficha-53">IoT & Perangkat Smart <span class="id">53</span></a></li>
-          <li><a href="#ficha-54">Safety & Security System <span class="id">54</span></a></li>
+          <li><a href="#ficha-52">Sistem Kontrol Akses <span class="id">52</span></a></li>
+          <li><a href="#ficha-53">IoT & Perangkat Pintar <span class="id">53</span></a></li>
+          <li><a href="#ficha-54">Sistem Keselamatan & Keamanan <span class="id">54</span></a></li>
           <li><a href="#ficha-55">Sistem HVAC <span class="id">55</span></a></li>
         </ul>
       </div>
+
+      <!-- GRUP: PERANGKAT LUNAK & OPERASI -->
       <div class="index-group">
-        <h3>Software & Operasional <span class="num">02</span></h3>
+        <h3>Perangkat Lunak & Operasi <span class="num">02</span></h3>
         <ul>
-          <li><a href="#ficha-56">Software & Lisensi <span class="id">56</span></a></li>
-          <li><a href="#ficha-57">Maintenance & Tools <span class="id">57</span></a></li>
+          <li><a href="#ficha-56">Perangkat Lunak & Lisensi <span class="id">56</span></a></li>
+          <li><a href="#ficha-57">Pemeliharaan & Alat <span class="id">57</span></a></li>
         </ul>
       </div>
+
+      <!-- GRUP: AREA KHUSUS -->
       <div class="index-group">
         <h3>Area Khusus <span class="num">02</span></h3>
         <ul>
@@ -163,10 +568,15 @@
           <li><a href="#ficha-59">Peralatan Rooftop <span class="id">59</span></a></li>
         </ul>
       </div>
+
     </div>
   </div>
 </section>
 
+
+<!-- ============================================================
+     [BAGIAN 03] INTRO NARATIF
+     ============================================================ -->
 <section class="wrap">
   <div class="intro">
     <div class="intro-text">
@@ -175,92 +585,104 @@
         <a href="https://docs.google.com/spreadsheets/d/1qqrbIBgKvcFGtMlgfIDPlRoouRmw-aiG8OlXaoyIveM/edit?gid=1346872997#gid=1346872997" target="_blank">
           import_Aston_Bocettos_City_Suites.xlsx
         </a>
-      </strong>. Ini bukan dokumen untuk dibaca: ini dokumen untuk <strong>diedit</strong>.</p>
-      <p>Berisi <strong>7 sheet</strong> — Access Point, Cabling, Rooms, Software, Infrastructure, Workstation dan IT MPL — dengan proposal nomenklatur untuk setiap item guna memantau progres selama preopening properti.</p>
-      <p>Berdasarkan <strong>blueprint yang diberikan</strong>, lokasi-lokasi ini telah diekstrak dan <strong>nomenklatur yang diusulkan</strong> telah dibuat untuk item di setiap kategori.</p>
-      <p>Yang kami minta sederhana: <strong>telusuri, perbarui sesuai kenyataan Anda, dan kembalikan</strong>. Jika nama, status, atau kolom Anda berbeda dari kami, mohon kirimkan kepada kami dan kami akan memetakannya di sini.</p>
-      <p>Jika ada tempat atau item tambahan, ini adalah mekanisme untuk menyinkronkan pekerjaan di lapangan dengan pengawasan progres agar kita semua berbicara dalam bahasa yang sama.</p>
+      </strong>. Ini bukan dokumen untuk dibaca: ini adalah dokumen untuk <strong>diedit</strong>.</p>
+      <p>Berisi <strong>7 lembar</strong> — Access Point, Cabling, Rooms, Software, Infrastructure, Workstation, dan IT MPL — dengan usulan nomenklatur untuk setiap item guna memantau kemajuannya selama pra-pembukaan properti.</p>
+      <p>Berdasarkan <strong>gambar yang disediakan</strong>, <strong>lokasi</strong> ini telah diekstraksi dan <strong>nomenklatur yang diusulkan</strong> telah dibuat untuk item di setiap kategori.</p>
+      <p>Yang kami minta dari Anda sederhana: <strong>telusuri, perbarui dengan realitas Anda, dan kembalikan</strong>. Jika nama, status, atau kolom Anda berbeda dari kami, kirimkan kepada kami dan kami akan memetakannya di sini.</p>
+      <p>Jika ada tempat atau item tambahan, inilah mekanisme untuk menyinkronkan pekerjaan di lokasi dengan pengawasan kemajuan agar semua orang berbicara dalam bahasa yang sama.</p>
     </div>
     <div class="intro-visual">
       <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/Rooftop.jpg" alt="Rooftop">
       <div class="badge">
-        <strong>Excel menyertai Anda</strong>
-        <span>Dikirim terlampir · Dikembalikan telah diedit · Disinkronkan dengan aplikasi</span>
+        <strong>Excel bepergian dengan Anda</strong>
+        <span>Dikirim sebagai lampiran · Dikembalikan setelah diedit · Disinkronkan dengan aplikasi</span>
       </div>
     </div>
   </div>
 </section>
 
+
+<!-- ============================================================
+     [BAGIAN 04] ALUR 4 LANGKAH
+     ============================================================ -->
 <section class="flow">
   <div class="wrap">
     <div class="flow-head">
-      <div class="kicker">Alur perjalanan</div>
+      <div class="kicker">Perjalanan</div>
       <h2>Empat langkah, <em>satu alur</em>.</h2>
     </div>
     <div class="steps">
       <div class="step">
         <span class="n">01</span>
         <h3>Telusuri</h3>
-        <p>Buka Excel. Setiap sheet adalah bab: hardware, kabel, kamar, software, infrastruktur, workstation dan pembelian.</p>
+        <p>Buka Excel. Setiap lembar adalah bab: perangkat keras, pengkabelan, kamar, perangkat lunak, infrastruktur, workstation, dan pembelian.</p>
       </div>
       <div class="step">
         <span class="n">02</span>
         <h3>Selaraskan</h3>
-        <p>Bandingkan nama kami (<em>F03-Room-301</em>) dengan nama Anda. Jika berbeda, kirimkan kepada kami agar bisa dipetakan dan dipantau dengan tepat.</p>
+        <p>Bandingkan nama kami (<em>F03-Room-301</em>) dengan milik Anda. Jika berbeda, kirimkan kepada kami agar kami dapat memetakan dan memberikan tindak lanjut yang tepat.</p>
       </div>
       <div class="step">
         <span class="n">03</span>
         <h3>Perbarui</h3>
-        <p>Ubah FALSE menjadi TRUE di tempat yang sudah selesai. Isi serial number, IP, foto dan tanggal. Tambahkan baris jika properti Anda memiliki lebih banyak peralatan atau item, dan hapus yang sudah tidak berlaku.</p>
+        <p>Ubah FALSE menjadi TRUE di tempat yang sudah selesai. Isi serial, IP, foto, dan tanggal. Tambahkan baris jika properti Anda memiliki lebih banyak peralatan atau item, dan hapus yang sudah tidak ada.</p>
       </div>
       <div class="step">
         <span class="n">04</span>
         <h3>Kembalikan</h3>
-        <p>Kirimkan hasil survei lapangan Anda atas topik-topik ini agar kami dapat memetakan dan memperbarui nomenklatur Anda di kontrol pre-opening kami. Kami akan menyinkronkan aplikasi dengan struktur nyata Anda di lapangan.</p>
+        <p>Kirimkan kepada kami survei lapangan Anda di lokasi tentang topik-topik ini agar kami dapat memetakan dan memperbarui nomenklatur Anda dalam kontrol pra-pembukaan kami. Kami akan menyinkronkan aplikasi dengan struktur nyata Anda di lokasi.</p>
       </div>
     </div>
   </div>
 </section>
 
+
+<!-- ============================================================
+     [BAGIAN 05] PROGRES & CARA MEMPERBARUI
+     ============================================================ -->
 <section class="progress-block">
   <div class="wrap">
     <div class="progress-inner">
-      <div class="kicker">Untuk apa memperbarui</div>
-      <h2>Setiap item berarti. <em>Setiap TRUE</em> mengukur progres.</h2>
+      <div class="kicker">Mengapa memperbarui itu penting</div>
+      <h2>Setiap item berarti. <em>Setiap TRUE</em> mengukur kemajuan.</h2>
       <p>
-        Setiap baris Excel mewakili <strong>item fisik nyata</strong> di properti: satu AP, satu kamera, satu TV, satu door lock, satu tablet, satu switch.
-        Progres preopening diukur <strong>item per item</strong>, bukan per blok atau estimasi umum maupun parsial — akurasi diperlukan.
+        Setiap baris di Excel mewakili <strong>item fisik nyata</strong> di properti: sebuah AP, kamera, TV, kunci, tablet, switch.
+        Kemajuan pra-pembukaan diukur <strong>item per item</strong>, bukan per blok atau estimasi umum atau parsial; ketepatan diperlukan.
       </p>
       <p>
-        Karena itu penting bagi tim untuk menelusuri Excel dan menandai setiap tugas yang telah selesai secara tepat:
+        Karena itu penting bagi tim untuk menelusuri Excel dan menandai setiap tugas yang diselesaikan dengan tepat:
         <span class="pill">FALSE → TRUE</span> di tempat yang sudah selesai,
-        dan lengkapi <strong>serial number, IP, foto dan catatan</strong> di kolom yang tersedia.
-        Dengan begitu aplikasi preopening mencerminkan kondisi nyata properti dan kami dapat mengukur seberapa jauh kemajuan dari hari ke hari, menit ke menit, per kategori dan per departemen.
+        dan melengkapi <strong>serial, IP, foto, dan observasi</strong> di kolom terbuka.
+        Dengan begitu aplikasi pra-pembukaan mencerminkan status nyata properti dan kami dapat mengukur seberapa jauh kemajuan hari demi hari, menit demi menit, per kategori dan per departemen.
       </p>
       <p>
-        <strong>Setiap penyesuaian, pertanyaan atau umpan balik</strong> mohon kirimkan kepada kami melalui email.
+        <strong>Setiap penyesuaian, pertanyaan, atau umpan balik</strong> silakan kirimkan kepada kami melalui email.
       </p>
     </div>
   </div>
 </section>
 
+
+<!-- ============================================================
+     [BAGIAN 06] LEGENDA · CARA MEMBACA NAMA KAMI
+     ============================================================ -->
 <section class="wrap">
   <div class="legend">
     <h3>Cara <em>membaca</em> nomenklatur yang diusulkan.</h3>
-    <p class="sub">Semua nomenklatur Excel mengikuti aturan ini. Jika milik Anda berbeda, jangan dihapus: kirimkan kepada kami untuk dipetakan.</p>
+    <p class="sub">Semua nomenklatur di Excel mengikuti aturan ini. Jika milik Anda berbeda, jangan hapus: kirimkan kepada kami agar kami dapat memetakannya.</p>
     <div class="legend-grid">
       <div class="legend-col">
-        <h4>Lantai & Level</h4>
+        <h4>Lantai dan level</h4>
         <ul>
-          <li><span>F01 … F17</span><span>Lantai 1 sampai 17</span></li>
-          <li><span>SS</span><span>Semi Basement</span></li>
+          <li><span>F01 … F17</span><span>Lantai 1 hingga 17</span></li>
+          <li><span>SS</span><span>Semi-Basement</span></li>
           <li><span>N1 · N2 · N3</span><span>Level -1, -2, -3</span></li>
           <li><span>N35</span><span>Level -3.5</span></li>
           <li><span>BLD</span><span>Building (area umum: lift, shaft)</span></li>
         </ul>
       </div>
       <div class="legend-col">
-        <h4>Jenis Area</h4>
+        <h4>Jenis area</h4>
         <ul>
           <li><span>Room</span><span>Kamar tamu</span></li>
           <li><span>Public</span><span>Area publik</span></li>
@@ -271,53 +693,56 @@
       <div class="legend-col">
         <h4>Departemen</h4>
         <ul>
-          <li><span>ASTON11</span><span>Hotel Code</span></li>
+          <li><span>ASTON11</span><span>Kode Hotel</span></li>
           <li><span>FO</span><span>Front Office</span></li>
-          <li><span>HR</span><span>Human Resources</span></li>
-          <li><span>FB · AB</span><span>Food & Beverage</span></li>
-          <li><span>HK · EN</span><span>Housekeeping, Engineering</span></li>
-          <li><span>ST · PU · CM</span><span>Storage, Purchasing, Condo Manager</span></li>
+          <li><span>HR</span><span>Sumber Daya Manusia</span></li>
+          <li><span>FB · AB</span><span>Makanan & Minuman</span></li>
+          <li><span>HK · EN</span><span>Tata Graha, Teknik</span></li>
+          <li><span>ST · PU · CM</span><span>Penyimpanan, Pembelian, Manajer Kondominium</span></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
+
+<!-- ============================================================
+     [BAGIAN 07] SINKRONISASI EMAIL · APAKAH NAMA ANDA BERBEDA?
+     ============================================================ -->
 <section class="wrap">
   <div class="sync">
     <h2>Apakah standar Anda terlihat <em>berbeda</em>?</h2>
-    <p>Jika perusahaan Anda menggunakan label, tag atau pengenal lain, status lain atau kolom lain, jangan menyesuaikannya dengan milik kami. Kirimkan email kepada kami tentang apa yang ingin Anda ubah dan kami akan memperbarui aplikasi progres kami untuk menyinkronkannya dengan Anda.</p>
+    <p>Jika perusahaan Anda menggunakan label, tag, atau pengenal lain, status lain, atau kolom lain, jangan menyesuaikannya dengan milik kami. Kirimkan email kepada kami dengan apa yang ingin Anda ubah dan kami akan memperbarui aplikasi kemajuan kami untuk menyinkronkannya dengan Anda.</p>
 
-    <div class="email-card">
-      <span class="label">Email:</span>
-      <span class="addr">arian.g@archipelagohotels.com</span>
-    </div>
+
   </div>
 </section>
 
+
 <!-- ============================================================
-     [SECTION 08] CARDS (59) — Traducción al indonesio
+     [BAGIAN 08] KARTU KATEGORI (59)
      ============================================================ -->
 
+<!-- ---------- [KARTU 01] ACCESS POINT (AP) ---------- -->
 <section class="ficha" id="ficha-01">
   <div class="wrap"><div class="ficha-inner">
     <div class="ficha-visual">
-      <span class="tag"><span class="dot"></span>Access Points (AP)</span>
+      <span class="tag"><span class="dot"></span>Access Point (AP)</span>
       <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/ap.png" alt="Access Point">
     </div>
     <div class="ficha-text">
-      <div class="kicker">Sheet 01 · 137 record</div>
-      <h2>AP yang memberi <em>nyawa pada WiFi</em>.</h2>
-      <p class="lead">Setiap baris adalah satu Access Point. Progres dihitung dalam empat langkah: pemasangan, firmware, konfigurasi dan koneksi.</p>
+      <div class="kicker">Lembar 01 · 137 catatan</div>
+      <h2>AP yang memberi <em>hidup pada WiFi</em>.</h2>
+      <p class="lead">Setiap baris adalah Access Point. Kemajuan dihitung dalam empat langkah: pemasangan, firmware, konfigurasi, dan koneksi.</p>
       <div class="checks">
         <div class="check"><span class="box">✓</span><span><strong>Mounted:</strong> AP sudah terpasang secara fisik.</span></div>
         <div class="check"><span class="box">✓</span><span><strong>Firmware Updated:</strong> dengan versi terbaru.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> SSID, VLAN dan controller siap.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> SSID, VLAN, dan controller siap.</span></div>
         <div class="check"><span class="box">✓</span><span><strong>Online:</strong> terlihat dan merespons.</span></div>
       </div>
       <div class="samples-label">
         <span class="lbl-kicker">Contoh identifikasi</span>
-        <span class="lbl-text">begini penamaan AP di Excel terlampir.</span>
+        <span class="lbl-text">begini cara AP diberi nama di Excel terlampir.</span>
       </div>
       <div class="samples">
         <span class="sample">SS-BOH-StaffOffice</span>
@@ -329,6 +754,7 @@
   </div></div>
 </section>
 
+<!-- ---------- [KARTU 02] DISTRIBUTION SWITCH ---------- -->
 <section class="ficha reverse" id="ficha-02">
   <div class="wrap"><div class="ficha-inner">
     <div class="ficha-visual">
@@ -336,17 +762,17 @@
       <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/switch.png" alt="Distribution Switch">
     </div>
     <div class="ficha-text">
-      <div class="kicker">Kategori · Network Infrastructure</div>
-      <h2>Distribusi <em>cerdas</em> dari jaringan.</h2>
-      <p class="lead">Switch distribusi per layanan (WiFi 48P, IPTV 48P ×2, CCTV 24P) yang terletak di rack F05, F10, F15, N-1 dan Security Room.</p>
+      <div class="kicker">Kategori · Infrastruktur Jaringan</div>
+      <h2>Distribusi <em>cerdas</em> jaringan.</h2>
+      <p class="lead">Switch distribusi per layanan (WiFi 48P, IPTV 48P ×2, CCTV 24P) yang terletak di rak F05, F10, F15, N-1, dan Security Room.</p>
       <div class="checks">
-        <div class="check"><span class="box">✓</span><span><strong>Terpasang:</strong> switch terpasang di rack-nya.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Terkonfigurasi:</strong> VLAN dan port sudah ditetapkan.</span></div>
-        <div class="check"><span class="box">✓</span><span><strong>Uplink:</strong> ke core berfungsi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> switch terpasang di raknya.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> VLAN dan port ditetapkan.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Uplink:</strong> uplink ke core berfungsi.</span></div>
       </div>
       <div class="samples-label">
         <span class="lbl-kicker">Contoh identifikasi</span>
-        <span class="lbl-text">begini penamaan distribution switch di Excel terlampir.</span>
+        <span class="lbl-text">begini cara distribution switch diberi nama di Excel terlampir.</span>
       </div>
       <div class="samples">
         <span class="sample">F05-Dist-WiFi-01</span>
@@ -358,12 +784,1709 @@
   </div></div>
 </section>
 
-<!-- Fichas 03-59 con traducción al indonesio -->
+<!-- ---------- [KARTU 03] CORE SWITCH ---------- -->
+<section class="ficha" id="ficha-03">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Core Switch</span>
+      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/core.png" alt="Core Switch">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Jaringan</div>
+      <h2><em>Otak</em> dari seluruh jaringan.</h2>
+      <p class="lead">Switch core (Core Switch 1 dan 2) dengan uplink SFP ke distribusi. Dikonfigurasi sebelum switch distribusi.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> core switch terpasang di rak.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> layer 3, VLAN, dan rute.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Uplink:</strong> SFP ke distribusi berfungsi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Core Switch muncul di IT MPL dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-Core-Switch-01</span>
+        <span class="sample">F01-Core-Switch-02</span>
+      </div>
+    </div>
+  </div></div>
+</section>
 
+<!-- ---------- [KARTU 04] FIREWALL ---------- -->
+<section class="ficha reverse" id="ficha-04">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Firewall</span>
+      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/firewall.png" alt="Firewall">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Jaringan</div>
+      <h2><em>Penjaga</em> jaringan perimeter.</h2>
+      <p class="lead">Appliance keamanan perimeter dengan VPN dan penyeimbangan WAN. Perangkat aktif pertama setelah router ISP di rak utama.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> firewall terpasang di rak.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> aturan, VPN, dan penyeimbangan.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Dashboard:</strong> dapat diakses oleh IT Leader.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Firewall muncul di IT MPL dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-Firewall-01</span>
+        <span class="sample">F01-Firewall-Rack-01</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 05] ROUTER WAN ---------- -->
+<section class="ficha" id="ficha-05">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Router WAN</span>
+      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/router.jpg" alt="Router WAN">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Jaringan</div>
+      <h2><em>Pintu</em> ke dunia luar.</h2>
+      <p class="lead">Router dengan dua tautan ISP (WAN1 dan WAN2). Dipasang di rak utama bersama firewall dan divalidasi terhadap ISP primer dan sekunder.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>WAN1:</strong> router ISP primer operasional.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>WAN2:</strong> router ISP sekunder operasional.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Balancing:</strong> terintegrasi dengan firewall.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Router WAN muncul di IT MPL dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-WAN-Router-01</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 06] ONT FIBER OPTIC ---------- -->
+<section class="ficha reverse" id="ficha-06">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>ONT Fiber Optic</span>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="ONT">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Jaringan</div>
+      <h2>Di mana fiber <em>menjadi</em> sinyal.</h2>
+      <p class="lead">Optical Network Terminal yang menerima fiber ISP dan mengirimkan Ethernet ke router WAN. Titik pertama tautan internet.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> ONT di rak utama.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Active:</strong> LED tautan menyala.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Delivering:</strong> Ethernet ke Router WAN.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini ONT Fiber Optic muncul di IT MPL dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-ONT-01</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 07] PORTAL WIFI ---------- -->
+<section class="ficha" id="ficha-07">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Portal WiFi</span>
+      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/portal.jpg" alt="Portal WiFi">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · IT MPL</div>
+      <h2><em>Layar</em> pertama yang dilihat tamu.</h2>
+      <p class="lead">Portal tertutup untuk tamu (captive portal), metode autentikasi (voucher, one-click), dan kustomisasi visual dengan logo dan warna hotel.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Portal:</strong> dipublikasikan dan dapat diakses.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Authentication:</strong> metode ditentukan dan diuji.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Customization:</strong> logo dan warna diterapkan.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Captive Portal WiFi Tamu muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Guest WiFi Captive Portal</span>
+        <span class="sample">Authentication Method</span>
+        <span class="sample">Portal Personalization</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 08] PENGKABELAN ---------- -->
+<section class="ficha reverse" id="ficha-08">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Pengkabelan</span>
+      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/testred.jpg" alt="Pengkabelan">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Lembar 02 · ~400 catatan</div>
+      <h2>Kabel yang <em>tidak terlihat</em>, tetapi menopang segalanya.</h2>
+      <p class="lead">Dari SS ke N35, dari F01 ke F17, dari lift ke shaft. Setiap titik jaringan divalidasi dalam empat langkah hingga tersertifikasi.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Pulled:</strong> kabel ditarik ke titik.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Terminated:</strong> terhubung di patch panel atau faceplate.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Labeled:</strong> diberi label di kedua ujung.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> tersertifikasi dengan tester.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara titik pengkabelan diberi nama di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">SS-BOH-Receiving</span>
+        <span class="sample">N1-CCTV-Parking-01</span>
+        <span class="sample">F01-BOH-ITControlRoom-Rack</span>
+        <span class="sample">BLD-CCTV-Lift1</span>
+        <span class="sample">BLD-BOH-Shaft-01</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 09] CAT6 / CAT6A ---------- -->
+<section class="ficha" id="ficha-09">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Pengkabelan · Cat6 / Cat6a</span>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Cat6">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Pengkabelan</div>
+      <h2><em>Standar</em> dari semua pengkabelan horizontal.</h2>
+      <p class="lead">Pengkabelan horizontal terstruktur Cat6 atau Cat6a untuk data, suara, IPTV, dan CCTV. Divalidasi sebagai ditarik, diterminasi, diberi label, dan tersertifikasi.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Pulled:</strong> kabel ditarik ke titik.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Terminated:</strong> di faceplate atau patch panel.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Certified:</strong> dengan tester jaringan.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini pengkabelan horizontal Cat6 / Cat6a muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Cat6 / Cat6a Cable</span>
+        <span class="sample">Horizontal Cabling</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 10] FIBER OPTIC ---------- -->
+<section class="ficha reverse" id="ficha-10">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Pengkabelan · Fiber Optic</span>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Fiber">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Pengkabelan</div>
+      <h2><em>Backbone</em> antar rak.</h2>
+      <p class="lead">Backbone fiber optic antar rak dan ruang kontrol. Divalidasi sebagai ditarik, diterminasi di OTB/ODF, dan tersertifikasi dengan tester optik.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Run:</strong> fiber antar rak.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Terminated:</strong> di OTB/ODF.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Certified:</strong> dengan tester optik.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini backbone fiber optic muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Fiber Optic Backbone</span>
+        <span class="sample">OTB Termination</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 11] PATCH CORD ---------- -->
+<section class="ficha" id="ficha-11">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Pengkabelan · Patch Cord</span>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Patch Cord">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Pengkabelan</div>
+      <h2><em>Kabel</em> yang menghubungkan dunia.</h2>
+      <p class="lead">Patch cord Cat6 (1m, 2m, 3m) dan fiber. Dihitung per rak dan divalidasi terhadap patch panel yang sesuai.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Stock:</strong> patch cord per ukuran tersedia.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> terhubung dari patch panel ke switch.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> dengan tautan stabil.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini patch cord Cat6 dan fiber muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Patch Cord Cat6 1m</span>
+        <span class="sample">Patch Cord Cat6 2m</span>
+        <span class="sample">Patch Cord Cat6 3m</span>
+        <span class="sample">Patch Cord Fiber</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 12] FACEPLATE & JACK ---------- -->
+<section class="ficha reverse" id="ficha-12">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Faceplate & Jack</span>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Faceplate">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Pengkabelan</div>
+      <h2><em>Terminasi terlihat</em> dari pengkabelan.</h2>
+      <p class="lead">Faceplate dan jack modular Cat6 di setiap titik jaringan (kamar, kantor, BOH). Divalidasi terhadap daftar titik aktif.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> faceplate dengan jack Cat6.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Labeled:</strong> terhadap patch panel.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> tautan ke switch diverifikasi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini faceplate dan jack modular Cat6 muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Faceplate</span>
+        <span class="sample">Modular Jack Cat6</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 13] MANAJEMEN KABEL ---------- -->
+<section class="ficha" id="ficha-13">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Manajemen Kabel</span>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Manajemen Kabel">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Pengkabelan</div>
+      <h2><em>Keteraturan</em> yang terlihat di rak.</h2>
+      <p class="lead">Baki, duct, velcro, dan pengikat yang menjaga pengkabelan tetap rapi dan diberi label di rak dan konduit.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Trays:</strong> cable tray terpasang.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Ducts:</strong> cable duct di sepanjang jalur.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Velcro:</strong> pengikat merapikan rak.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini baki, duct, dan velcro muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Cable Tray</span>
+        <span class="sample">Cable Duct</span>
+        <span class="sample">Velcro / Cable Ties</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 14] RAK ---------- -->
+<section class="ficha reverse" id="ficha-14">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Rak</span>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Rak">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Jaringan</div>
+      <h2><em>Kerangka logam</em> dari jaringan.</h2>
+      <p class="lead">Kabinet komunikasi: Server Rack 24U dan Distribution Rack 15U. Divalidasi berdasarkan lokasi: Control Room, Security, N-1, F05, F10, F15.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> rak terpasang dan rata.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Powered:</strong> outlet dan UPS terhubung.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Organized:</strong> patch panel dan wiring siap.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara rak diberi nama di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-Rack-ControlRoom</span>
+        <span class="sample">F01-Rack-SecurityRoom</span>
+        <span class="sample">N1-Rack-Basement1</span>
+        <span class="sample">F05-Rack</span>
+        <span class="sample">F10-Rack</span>
+        <span class="sample">F15-Rack</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 15] PATCH PANEL ---------- -->
+<section class="ficha" id="ficha-15">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Patch Panel</span>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Patch Panel">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Jaringan</div>
+      <h2>Di mana pengkabelan <em>tertata</em>.</h2>
+      <p class="lead">Patch panel Cat6 48 atau 24 port, plus panel fiber. Dipasang di setiap rak untuk menerminasi pengkabelan horizontal dan vertikal.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> patch panel terpasang di rak.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Terminated:</strong> port diberi label dan diuji.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Documented:</strong> peta port tercatat.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Patch Panel muncul di IT MPL dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-PatchPanel-48P-01</span>
+        <span class="sample">F05-PatchPanel-48P-01</span>
+        <span class="sample">Patch Panel 24P</span>
+        <span class="sample">Patch Panel Fiber</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 16] WIRING MANAGEMENT ---------- -->
+<section class="ficha reverse" id="ficha-16">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Wiring Management</span>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Wiring Management">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Jaringan</div>
+      <h2><em>Keteraturan visual</em> dari rak.</h2>
+      <p class="lead">Organizer horizontal 1U untuk menata patch cord di dalam rak. Dihitung per rak dan divalidasi bersama patch panel.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> organizer terpasang di 1U.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Cables:</strong> patch cord dirutekan dan ditata.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Labeled:</strong> terlihat di kedua ujung.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Wiring Management muncul di IT MPL (24 unit) dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-WiringMgmt-48P-01</span>
+        <span class="sample">F05-WiringMgmt-TV-01</span>
+        <span class="sample">Wiring Management 1U</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 17] OTB / ODF FIBER OPTIC ---------- -->
+<section class="ficha" id="ficha-17">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>OTB / ODF Fiber Optic</span>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="OTB ODF">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Jaringan</div>
+      <h2><em>Titik optik</em> dari backbone.</h2>
+      <p class="lead">Kotak terminasi optik (OTB) dan distribution frame fiber (ODF). Menerima backbone fiber antar rak dan ruang kontrol.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> OTB/ODF terpasang di rak.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Terminated:</strong> konektor fiber disambung.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Certified:</strong> daya optik diverifikasi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini OTB dan ODF muncul di IT MPL dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-OTB-01</span>
+        <span class="sample">OTB Fiber Optic</span>
+        <span class="sample">ODF Optical Distribution Frame</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 18] MODUL SFP ---------- -->
+<section class="ficha reverse" id="ficha-18">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Modul SFP</span>
+      <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1000&q=80" alt="SFP">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Jaringan</div>
+      <h2><em>Konektor</em> yang menyalakan fiber.</h2>
+      <p class="lead">Modul optik pluggable yang memungkinkan uplink fiber antara core dan distribusi. Divalidasi satu per tautan.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Inserted:</strong> SFP di port switch.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Link:</strong> tautan optik menyala.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Traffic:</strong> data mengalir tanpa kesalahan.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Modul SFP muncul di IT MPL dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-Switch-SFP-01</span>
+        <span class="sample">SFP Module</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 19] MEDIA CONVERTER ---------- -->
+<section class="ficha" id="ficha-19">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Media Converter</span>
+      <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1000&q=80" alt="Media Converter">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Jaringan</div>
+      <h2>Jembatan antara <em>fiber dan tembaga</em>.</h2>
+      <p class="lead">Konverter fiber-ke-tembaga digunakan di titik di mana switch langsung tidak dapat menjangkau (4 unit di Security Room F01).</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> media converter terpasang.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Link:</strong> fiber dan tembaga berfungsi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Powered:</strong> dengan sumber dan cadangan.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Media Converter muncul di IT MPL (4 unit) dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-MediaConverter-01</span>
+        <span class="sample">4 unit</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 20] UPS ---------- -->
+<section class="ficha reverse" id="ficha-20">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>UPS</span>
+      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/ups.png" alt="UPS">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Jaringan</div>
+      <h2>Cadangan <em>listrik</em> untuk sistem kritis.</h2>
+      <p class="lead">Sistem cadangan yang dipasang di rak (Control Room, Security, Basement 1, F05, F10, F15). Satu per rak, disesuaikan dengan beban rak.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> UPS terpasang di rak.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Charged:</strong> baterai 100%.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> otonomi diverifikasi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara UPS diberi nama per rak di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-UPS-ControlRoom-01</span>
+        <span class="sample">F01-UPS-SecurityRoom</span>
+        <span class="sample">N1-UPS-Basement1</span>
+        <span class="sample">F05-UPS</span>
+        <span class="sample">F10-UPS</span>
+        <span class="sample">F15-UPS</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 21] PDU ---------- -->
+<section class="ficha" id="ficha-21">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>PDU</span>
+      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/regleta.jpg" alt="PDU">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Jaringan</div>
+      <h2><em>Tulang punggung</em> daya rak.</h2>
+      <p class="lead">Power Distribution Unit: strip daya yang dapat dipasang di rak yang memberi daya peralatan rak. Divalidasi per rak yang dipasang.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> PDU terpasang di rak.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Powered:</strong> terhubung ke UPS.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Distributing:</strong> peralatan diberi daya.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini PDU muncul di IT MPL (6 unit).</span>
+      </div>
+      <div class="samples">
+        <span class="sample">PDU · Control Room</span>
+        <span class="sample">PDU · Distribution Racks</span>
+        <span class="sample">6 unit</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 22] GENSET ---------- -->
+<section class="ficha reverse" id="ficha-22">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Genset</span>
+      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/generador.jpg" alt="Genset">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Jaringan</div>
+      <h2><em>Garis terakhir</em> daya.</h2>
+      <p class="lead">Genset listrik cadangan untuk hotel. Divalidasi pemasangannya dan integrasi yang benar dengan UPS rak.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> genset di lokasi dan terhubung.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> start otomatis berfungsi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Integrated:</strong> dengan UPS dan panel utama.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Genset muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Power Generator</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 23] UPS KLIEN ---------- -->
+<section class="ficha" id="ficha-23">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>UPS Klien</span>
+      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/upspc.jpg" alt="UPS Klien">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Workstation</div>
+      <h2>Cadangan <em>lokal</em> untuk workstation kritis.</h2>
+      <p class="lead">UPS individual untuk workstation kritis (front desk dan POS) yang tidak berada di rak. Cadangan lokal berdurasi pendek.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> UPS di bawah workstation kritis.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Charged:</strong> baterai 100%.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> otonomi diverifikasi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini UPS Klien muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Client UPS · Front Desk</span>
+        <span class="sample">Client UPS · POS</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 24] KAMERA CCTV ---------- -->
+<section class="ficha reverse" id="ficha-24">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Kamera CCTV</span>
+      <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1000&q=80" alt="CCTV">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Pengawasan</div>
+      <h2>Mata yang <em>mengawasi</em> setiap sudut.</h2>
+      <p class="lead">Kamera pengawasan video yang didistribusikan per lantai, parkir, lift, dan area umum. Terhubung ke NVR dan divalidasi per zona.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> kamera terpasang di lokasinya.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Connected:</strong> terhubung ke NVR yang sesuai.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Recording:</strong> dengan retensi 30 hari.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara kamera diberi nama di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-CCTV-Lobby-01</span>
+        <span class="sample">F03-CCTV-Corridor-01</span>
+        <span class="sample">F17-CCTV-Pool-01</span>
+        <span class="sample">N1-CCTV-Parking-01</span>
+        <span class="sample">BLD-CCTV-Lift1</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 25] KABEL CCTV ---------- -->
+<section class="ficha" id="ficha-25">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Kabel CCTV</span>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Kabel CCTV">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Pengawasan</div>
+      <h2>Jalur <em>diam</em> dari pengawasan.</h2>
+      <p class="lead">Kabel Cat6 khusus untuk setiap kamera CCTV, dengan jalurnya dari titik ke NVR. Divalidasi sebagai ditarik, diterminasi, dan diuji.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Pulled:</strong> kabel ditarik ke kamera.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Terminated:</strong> terhubung di NVR.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> sinyal stabil diverifikasi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara jalur CCTV diberi nama di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">SS-CCTV-Parking-01</span>
+        <span class="sample">N1-CCTV-Corridor-01</span>
+        <span class="sample">F03-CCTV-Corridor-01</span>
+        <span class="sample">BLD-CCTV-Lift1</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 26] NVR ---------- -->
+<section class="ficha reverse" id="ficha-26">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>NVR</span>
+      <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1000&q=80" alt="NVR">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Pengawasan</div>
+      <h2>Di mana pengawasan <em>disimpan</em>.</h2>
+      <p class="lead">Network Video Recorder (NVR 32CH dan 2× NVR 16CH) dengan perekaman 30 hari. Setiap NVR mengelompokkan satu set kamera dan divalidasi secara terpisah.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> NVR terpasang di Security Room.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> kamera ditetapkan.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Recording:</strong> dengan retensi 30 hari.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara NVR diberi nama di Excel terlampir (1×32CH + 2×16CH).</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-NVR-32CH-01</span>
+        <span class="sample">F01-NVR-16CH-01</span>
+        <span class="sample">F01-NVR-16CH-02</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 27] HARD DISK (NVR) ---------- -->
+<section class="ficha" id="ficha-27">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Hard Disk (NVR)</span>
+      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/hddcctv.jpg" alt="Hard Disk">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Pengawasan</div>
+      <h2><em>Penyimpanan</em> untuk 30 hari video.</h2>
+      <p class="lead">Drive pengawasan yang dipasang di dalam setiap NVR. Disesuaikan untuk menjamin 30 hari perekaman terus-menerus.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> drive di dalam NVR.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Recognized:</strong> oleh NVR tanpa kesalahan.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Sized:</strong> 30 hari perekaman.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini drive pengawasan NVR muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Surveillance Hard Disk</span>
+        <span class="sample">NVR Storage</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 28] TV KAMAR ---------- -->
+<section class="ficha reverse" id="ficha-28">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>TV Kamar</span>
+      <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1000&q=80" alt="TV Kamar">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Televisi</div>
+      <h2>Layar yang <em>menyambut</em> tamu.</h2>
+      <p class="lead">Televisi di dalam setiap kamar (2 per kamar: Living 126 u. + Bedroom 126 u.). Divalidasi dengan pemasangan, ArchTV, VLAN, Google Home, dan casting.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Mounted:</strong> TV digantung dengan braket yang tepat.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>ArchTV:</strong> platform dikonfigurasi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>VLAN + Google Home:</strong> di jaringan kamar dan ditambahkan.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Cast:</strong> uji casting berhasil.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara TV kamar diberi nama di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F03-Room-301-TV-Living</span>
+        <span class="sample">F03-Room-301-TV-Bedroom</span>
+        <span class="sample">F16-Room-1609-TV-Living</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 29] BRAKET TV ---------- -->
+<section class="ficha" id="ficha-29">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Braket TV</span>
+      <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1000&q=80" alt="Braket TV">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Televisi</div>
+      <h2>Penopang yang <em>menahan</em> setiap layar.</h2>
+      <p class="lead">Braket dinding untuk setiap TV (2 per kamar = 252 unit). Dipasang sebelum menggantung layar dan divalidasi berdasarkan jenis dinding.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> braket dipasang ke dinding.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Leveled:</strong> posisi yang benar diverifikasi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Compatible:</strong> dengan ukuran TV yang ditetapkan.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini item Braket TV muncul di IT MPL (252 unit).</span>
+      </div>
+      <div class="samples">
+        <span class="sample">TV Bracket · Living</span>
+        <span class="sample">TV Bracket · Bedroom</span>
+        <span class="sample">252 unit</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 30] TV AREA PUBLIK ---------- -->
+<section class="ficha reverse" id="ficha-30">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>TV Area Publik</span>
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1000&q=80" alt="TV Publik">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Televisi</div>
+      <h2>Layar yang <em>berkomunikasi</em> untuk hotel.</h2>
+      <p class="lead">Televisi di lobi, restoran, bar, gym, spa, dan kolam renang. Dikonfigurasi dengan ArchTV atau Digital Signage tergantung area.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> TV terpasang di lokasinya.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> ArchTV atau Digital Signage.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Connected:</strong> ke VLAN area.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara TV area publik diberi nama di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-Public-Lobby-TV</span>
+        <span class="sample">F01-Public-Restaurant-TV</span>
+        <span class="sample">F01-Public-Bar-TV</span>
+        <span class="sample">F17-Public-Gym-TV</span>
+        <span class="sample">F17-Public-Spa-TV</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 31] DIGITAL SIGNAGE ---------- -->
+<section class="ficha" id="ficha-31">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Digital Signage</span>
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1000&q=80" alt="Digital Signage">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Televisi</div>
+      <h2>Komunikasi <em>visual</em> hotel.</h2>
+      <p class="lead">Layar dengan konten dinamis di area umum: prefunction, restoran, lobi. Platform dikonfigurasi dan konten divalidasi.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Platform:</strong> Digital Signage dikonfigurasi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Content:</strong> dimuat dan diverifikasi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Connection:</strong> di VLAN yang sesuai.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Digital Signage muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Digital Signage · Prefunction</span>
+        <span class="sample">Digital Signage · Lobby</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 32] CHROMECAST BAWAAN ---------- -->
+<section class="ficha reverse" id="ficha-32">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Chromecast Bawaan</span>
+      <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1000&q=80" alt="Chromecast">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Televisi</div>
+      <h2>Casting <em>tanpa hambatan</em> untuk tamu.</h2>
+      <p class="lead">Chromecast bawaan di setiap TV kamar (252 unit). Memungkinkan tamu memproyeksikan konten mereka dari ponsel ke layar.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> Chromecast aktif di TV.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Network:</strong> terhubung ke VLAN kamar.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> cast berhasil dari perangkat tamu.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Chromecast Bawaan muncul di IT MPL (252 unit).</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Chromecast Built-in · Room</span>
+        <span class="sample">252 unit</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 33] PLATFORM ARCHTV ---------- -->
+<section class="ficha" id="ficha-33">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Platform ArchTV</span>
+      <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1000&q=80" alt="ArchTV">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Televisi</div>
+      <h2>Pengalaman <em>audiovisual</em> tamu.</h2>
+      <p class="lead">Platform ArchTV dikonfigurasi di setiap televisi (kamar dan area umum). Termasuk IPTV Middleware dan konten hotel.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Middleware:</strong> IPTV dikonfigurasi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>ArchTV:</strong> platform aktif di setiap TV.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Content:</strong> saluran dan sambutan dimuat.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini ArchTV / IPTV Middleware muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">ArchTV · Room TVs</span>
+        <span class="sample">ArchTV · Public TVs</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 34] TELEPON SIP ---------- -->
+<section class="ficha reverse" id="ficha-34">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Telepon SIP</span>
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80" alt="Telepon SIP">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Telepon Hotel</div>
+      <h2>Suara hotel, <em>didigitalkan</em>.</h2>
+      <p class="lead">Telepon SIP Android di Resepsionis, Restoran, Room Service, dan BOH. Divalidasi pemasangan, ekstensi, PoE, dan panggilan ke tablet Samsung di kamar.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> telepon terpasang dengan PoE.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Extension:</strong> dikonfigurasi di PABX.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Calls:</strong> ke tablet dan antar area diverifikasi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara telepon SIP diberi nama di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-SIPPhone-Reception-01</span>
+        <span class="sample">F01-SIPPhone-Restaurant-01</span>
+        <span class="sample">F01-SIPPhone-RoomService-01</span>
+        <span class="sample">F01-SIPPhone-BOH-01</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 35] PABX ---------- -->
+<section class="ficha" id="ficha-35">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>PABX</span>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="PABX">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Telepon Hotel</div>
+      <h2><em>Sentral</em> yang menghubungkan setiap panggilan.</h2>
+      <p class="lead">Sentral telepon IP PBX dengan dukungan SIP trunk, dipasang di rak utama ruang kontrol. Basis sistem suara hotel.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> IP PBX terpasang di rak.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> ekstensi dan SIP trunk.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Operational:</strong> panggilan masuk/keluar.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini IP PBX dan PABX muncul di IT MPL dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-IPPBX-01</span>
+        <span class="sample">IP PBX</span>
+        <span class="sample">SIP Trunk</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 36] KONSOL OPERATOR ---------- -->
+<section class="ficha reverse" id="ficha-36">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Konsol Operator</span>
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80" alt="Konsol Operator">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Telepon Hotel</div>
+      <h2><em>Workstation</em> operator.</h2>
+      <p class="lead">Konsol operator yang terhubung ke PABX untuk mengelola panggilan masuk/keluar dan transfer dari resepsionis.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> konsol terpasang di resepsionis.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> ekstensi dan antrean.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> transfer dan konferensi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Konsol Operator muncul di IT MPL dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-OperatorConsole-01</span>
+        <span class="sample">Operator Console</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 37] OUTLET TELEPON ---------- -->
+<section class="ficha" id="ficha-37">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Outlet Telepon</span>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80" alt="Outlet Telepon">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Telepon Hotel</div>
+      <h2><em>Titik</em> di mana setiap panggilan lahir.</h2>
+      <p class="lead">Outlet data PoE untuk telepon SIP hotel: resepsionis, restoran, room service, dan BOH. Divalidasi berdasarkan lokasi.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> outlet data PoE.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Labeled:</strong> di patch panel yang sesuai.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> dengan telepon SIP terhubung.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara outlet untuk Telepon SIP diberi nama di Excel terlampir (4 titik).</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F01-PhoneOutlet-Restaurant-01</span>
+        <span class="sample">F01-PoE-Reception-01</span>
+        <span class="sample">F01-PoE-Restaurant-01</span>
+        <span class="sample">F01-PoE-RoomService-01</span>
+        <span class="sample">F01-PoE-BOH-01</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 38] SAMSUNG GALAXY TAB (DALAM KAMAR) ---------- -->
+<section class="ficha reverse" id="ficha-38">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Samsung Galaxy Tab (Dalam Kamar)</span>
+      <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=1000&q=80" alt="Samsung Galaxy Tab">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Telepon Hotel & Komunikasi Dalam Kamar</div>
+      <h2>Komunikasi <em>dalam kamar</em> tamu.</h2>
+      <p class="lead">Samsung Galaxy Tab A9 A11 2026 (126 unit, 1 per kamar) dengan layar sentuh, digunakan untuk komunikasi tamu dan panggilan Google Duo ke resepsionis/restoran.</p>
+      <p class="lead"><strong>Catatan:</strong> di Excel kolomnya masih disebut "Nest" karena telah ditentukan oleh aplikasi pra-pembukaan. Perangkat fisiknya adalah <strong>Samsung Galaxy Tab A9</strong> dan memenuhi fungsi yang sama.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Nest Installed (Tab):</strong> tablet ditempatkan dan diberi daya.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Nest Configured (Tab):</strong> di jaringan dan dengan akun hotel.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Serial dan IP:</strong> tercatat di Excel.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Calls:</strong> ke Resto dan Resepsionis diverifikasi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara tablet dalam kamar diberi nama di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F03-Room-301-NestHub</span>
+        <span class="sample">F03-Room-302-NestHub</span>
+        <span class="sample">F16-Room-1609-NestHub</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 39] KUNCI PINTU ---------- -->
+<section class="ficha" id="ficha-39">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Kunci Pintu</span>
+      <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1000&q=80" alt="Kunci Pintu">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Kunci & Pintu</div>
+      <h2><em>Penghalang</em> pertama keamanan.</h2>
+      <p class="lead">Kunci elektronik proximity (RFID) di semua 126 kamar. Terintegrasi dengan PMS dan divalidasi pintu per pintu.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> kunci terpasang di pintu.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Integrated:</strong> terhubung ke sistem kunci.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> dengan kartu master dan tamu.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara kunci diberi nama di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F03-Room-301-DoorLock</span>
+        <span class="sample">F03-Room-302-DoorLock</span>
+        <span class="sample">F16-Room-1609-DoorLock</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 40] KARTU KUNCI ---------- -->
+<section class="ficha reverse" id="ficha-40">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Kartu Kunci</span>
+      <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1000&q=80" alt="Kartu Kunci">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Kunci & Pintu</div>
+      <h2><em>Kunci</em> tamu.</h2>
+      <p class="lead">Kartu akses kamar RFID (126 unit dasar). Dienkode dengan sistem kunci dan divalidasi terhadap setiap pintu.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Purchased:</strong> stok awal dikirim.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Encoded:</strong> oleh encoder.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> pembukaan di pintu yang ditetapkan.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Kartu Kunci muncul di IT MPL (126 unit).</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Hotel Key Card</span>
+        <span class="sample">126 unit</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 41] ENCODER KARTU KUNCI ---------- -->
+<section class="ficha" id="ficha-41">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Encoder Kartu Kunci</span>
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80" alt="Encoder">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Kunci & Pintu</div>
+      <h2><em>Penulis</em> setiap kartu.</h2>
+      <p class="lead">Peralatan yang memprogram kartu RFID di resepsionis. Terhubung ke PC Key Station dan divalidasi dengan penerbitan kartu uji.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> encoder terhubung ke PC Key Station.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> perangkat lunak encoding.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> penerbitan kartu berhasil.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Encoder Kartu Kunci muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Key Card Encoder</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 42] PC KEY STATION ---------- -->
+<section class="ficha reverse" id="ficha-42">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>PC Key Station</span>
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80" alt="PC Key Station">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Kunci & Pintu</div>
+      <h2><em>Pusat</em> sistem kunci.</h2>
+      <p class="lead">PC khusus di resepsionis untuk mengelola sistem kunci dan encoding kartu. Terintegrasi dengan PMS.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> PC terpasang di resepsionis.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Software:</strong> sistem kunci terpasang.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Integration:</strong> dengan PMS diverifikasi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini PC Key Station muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Key Station PC</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 43] PERALATAN RUANG RAPAT ---------- -->
+<section class="ficha" id="ficha-43">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Peralatan Ruang Rapat</span>
+      <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1000&q=80" alt="Ruang Rapat">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Peralatan Ruang Rapat</div>
+      <h2>Di mana <em>ide</em> dipresentasikan.</h2>
+      <p class="lead">Seperangkat peralatan yang dipasang di ruang rapat (besar dan kecil): proyektor, layar, audio, mikrofon, TV, dan rak tambahan.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Projection:</strong> proyektor laser + layar terpasang.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Audio:</strong> ceiling speaker, mixer, dan mikrofon.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>TV:</strong> terpasang dan dikonfigurasi per ruangan.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Evacuation:</strong> integrasi dengan audio darurat.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara peralatan ruang rapat diberi nama di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F02-MeetingRoom-Large-Projector</span>
+        <span class="sample">F02-MeetingRoom-Large-Screen</span>
+        <span class="sample">F02-MeetingRoom-Small-Projector</span>
+        <span class="sample">F02-MeetingRoom-Large-TV</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 44] AUDIO RUANG RAPAT ---------- -->
+<section class="ficha reverse" id="ficha-44">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Audio Ruang Rapat</span>
+      <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1000&q=80" alt="Audio Rapat">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Peralatan Ruang Rapat</div>
+      <h2>Suara yang <em>menemani</em> setiap presentasi.</h2>
+      <p class="lead">Sistem audio ruangan: ceiling speaker, mixer, mixer amplifier, receiver Bluetooth, rack mixer, dan mikrofon nirkabel dengan basis.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Speakers:</strong> ceiling speaker terpasang per ruangan.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Mixer:</strong> audio mixer dan rack mixer dikonfigurasi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Microphones:</strong> nirkabel dengan basis dan diuji.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Bluetooth:</strong> receiver dipasangkan dan berfungsi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini peralatan audio ruang rapat muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F02-MeetingRoom-Large-Sound</span>
+        <span class="sample">F02-MeetingRoom-Large-Mic</span>
+        <span class="sample">F02-MeetingRoom-Large-Amp</span>
+        <span class="sample">Ceiling Speaker</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 45] PROYEKSI RUANG RAPAT ---------- -->
+<section class="ficha" id="ficha-45">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Proyeksi Ruang Rapat</span>
+      <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1000&q=80" alt="Proyeksi">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Peralatan Ruang Rapat</div>
+      <h2>Gambar yang <em>menerangi</em> ruangan.</h2>
+      <p class="lead">Proyektor laser ultra short throw (medium 100" dan large 120") plus layar dinding 16:9. Divalidasi proyektor + layar per ruangan.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Projector:</strong> ultra short throw terpasang.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Screen:</strong> wall mount 100" atau 120" terpasang.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Calibration:</strong> gambar selaras dan fokus.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini proyektor dan layar ruang rapat muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F02-MeetingRoom-Large-Projector</span>
+        <span class="sample">F02-MeetingRoom-Large-Screen</span>
+        <span class="sample">F02-MeetingRoom-Large-Projector-120</span>
+        <span class="sample">F02-MeetingRoom-Large-Screen-120</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 46] EVAKUASI RUANG RAPAT ---------- -->
+<section class="ficha reverse" id="ficha-46">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Evakuasi Ruang Rapat</span>
+      <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1000&q=80" alt="Evakuasi">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Peralatan Ruang Rapat</div>
+      <h2>Audio yang <em>menyelamatkan</em> nyawa.</h2>
+      <p class="lead">Integrasi audio evakuasi: switch converter overlapping dan speaker EVAC (TOA) di dekat amplifier, agar sistem darurat diutamakan.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Converter:</strong> switch overlapping terpasang.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>EVAC Speaker:</strong> TOA di dekat amplifier.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Cabling:</strong> dari EVAC ke converter terpasang.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> audio darurat diutamakan.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini integrasi audio evakuasi muncul di IT MPL dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F02-MeetingRoom-Evac-Converter</span>
+        <span class="sample">F02-MeetingRoom-Evac-Speaker</span>
+        <span class="sample">F02-MeetingRoom-Evac-Cable</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 47] TABLET (PER AREA) ---------- -->
+<section class="ficha" id="ficha-47">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Tablet (Per Area)</span>
+      <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?w=1000&q=80" alt="Tablet">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Workstation</div>
+      <h2>Operasi <em>di telapak tangan</em> Anda.</h2>
+      <p class="lead">Samsung Galaxy Tab A9 yang ditetapkan untuk posisi operasional: Resepsionis, Room Service, SPA, Piano Bar, Lobby Bar, All Day, Trattoria, dan Bar Trattoria. Digunakan untuk POS atau Google Home tergantung kasusnya.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> tablet dikirim ke area.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Configured:</strong> POS atau Google Home sesuai kebutuhan.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> alur operasional divalidasi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini tablet per area muncul di IT MPL dan di lembar Workstation.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">ASTON11RCTB01</span>
+        <span class="sample">ASTON11RSTB01</span>
+        <span class="sample">ASTON11SPTB01</span>
+        <span class="sample">ASTON11PBTB01</span>
+        <span class="sample">ASTON11LBTB01</span>
+        <span class="sample">ASTON11ADTB01</span>
+        <span class="sample">ASTON11TRTB01</span>
+        <span class="sample">ASTON11BTTB01</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 48] LAPTOP (MEJA RESEPSIONIS) ---------- -->
+<section class="ficha reverse" id="ficha-48">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Laptop (Meja Resepsionis)</span>
+      <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1000&q=80" alt="Laptop">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Workstation</div>
+      <h2>Kantor <em>mobile</em> resepsionis.</h2>
+      <p class="lead">3 laptop untuk Meja Resepsionis. Divalidasi dengan OS, domain, aplikasi, dan pengguna yang ditetapkan sebelum diserahkan ke tim resepsionis.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>OS:</strong> sistem operasi terpasang.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Domain:</strong> bergabung dengan domain korporat.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Apps:</strong> aplikasi checklist terpasang.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>User:</strong> Meja Resepsionis dikonfirmasi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara laptop diberi nama di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">ASTON11FONB01</span>
+        <span class="sample">ASTON11FONB02</span>
+        <span class="sample">ASTON11FONB03</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 49] PC PER PERAN OPERASIONAL ---------- -->
+<section class="ficha" id="ficha-49">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>PC per Peran Operasional</span>
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80" alt="PC Kantor">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Workstation</div>
+      <h2><em>Workstation</em> setiap peran.</h2>
+      <p class="lead">PC desktop yang ditetapkan berdasarkan peran operasional: Finance, Condo Manager, Reservations, HR, Chief Reception, Chief Maintenance, Chief Housekeeper, Storage, Purchasing, Chief Security, Chef, dan A&B.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>OS:</strong> sistem operasi terpasang.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Domain:</strong> bergabung dengan domain korporat.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Apps:</strong> aplikasi checklist terpasang.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>User:</strong> peran operasional dikonfirmasi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara PC operasional diberi nama di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">ASTON11FOPC01</span>
+        <span class="sample">ASTON11CMPC01</span>
+        <span class="sample">ASTON11RSPC01</span>
+        <span class="sample">ASTON11HRPC01</span>
+        <span class="sample">ASTON11FOPC02</span>
+        <span class="sample">ASTON11ENPC01</span>
+        <span class="sample">ASTON11HKPC01</span>
+        <span class="sample">ASTON11STPC01</span>
+        <span class="sample">ASTON11PUPC01</span>
+        <span class="sample">ASTON11SEPC01</span>
+        <span class="sample">ASTON11FBPC01</span>
+        <span class="sample">ASTON11ABPC01</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 50] PRINTER SCANNER ---------- -->
+<section class="ficha reverse" id="ficha-50">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Printer Scanner</span>
+      <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=1000&q=80" alt="Printer Scanner">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Workstation</div>
+      <h2>Mencetak dan memindai <em>dalam satu perangkat</em>.</h2>
+      <p class="lead">Printer multifungsi dengan scanner untuk area administratif: Meja Resepsionis, Kantor Condo Manager, dan Dapur A&B.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> perangkat di lokasinya.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>On network:</strong> dapat diakses dari PC area.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> pencetakan dan pemindaian berfungsi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Printer Scanner muncul di IT MPL dan di lembar Workstation.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">ASTON11FOPS01</span>
+        <span class="sample">ASTON11CMPS01</span>
+        <span class="sample">ASTON11ABPS01</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 51] PRINTER POS ---------- -->
+<section class="ficha" id="ficha-51">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Printer POS</span>
+      <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=1000&q=80" alt="Printer POS">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur Workstation</div>
+      <h2><em>Struk</em> yang menutup setiap transaksi.</h2>
+      <p class="lead">7 printer POS Epson TM-U220 dengan port jaringan untuk pusat konsumsi. Divalidasi berdasarkan lokasi dan konektivitas sistem POS.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> printer terpasang di pusat konsumsi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>On network:</strong> dengan port Ethernet dikonfigurasi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Tested:</strong> pencetakan dari POS diverifikasi.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini Printer POS muncul di IT MPL (Epson TM-U220, 7 unit).</span>
+      </div>
+      <div class="samples">
+        <span class="sample">ASTON11POSPR01</span>
+        <span class="sample">ASTON11POSPR02</span>
+        <span class="sample">ASTON11POSPR03</span>
+        <span class="sample">…</span>
+        <span class="sample">ASTON11POSPR07</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 52] SISTEM KONTROL AKSES ---------- -->
+<section class="ficha reverse" id="ficha-52">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Sistem Kontrol Akses</span>
+      <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=1000&q=80" alt="Kontrol Akses">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Sistem Kontrol Akses</div>
+      <h2>Siapa yang <em>masuk</em>, di mana, dan kapan.</h2>
+      <p class="lead">Kontrol akses untuk Gym, Spa, Pool, BOH, dan Ruang Rapat, plus Sistem Pemesanan Spa. Reader, kunci, dan integrasinya dengan sistem hotel divalidasi.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Reader:</strong> terpasang dan dikalibrasi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Lock:</strong> terhubung ke controller.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Integration:</strong> dengan sistem akses hotel.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Spa Booking:</strong> sistem pemesanan spa operasional.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara akses terkontrol dan Spa Booking diberi nama di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F17-Access-Gym-01</span>
+        <span class="sample">F17-Access-Spa-01</span>
+        <span class="sample">F17-Access-Pool-01</span>
+        <span class="sample">F01-Access-BOH-01</span>
+        <span class="sample">F02-Access-MeetingRoom-01</span>
+        <span class="sample">F17-SpaBooking-01</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 53] IoT & PERANGKAT PINTAR ---------- -->
+<section class="ficha" id="ficha-53">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>IoT & Perangkat Pintar</span>
+      <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=1000&q=80" alt="IoT">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · IT MPL</div>
+      <h2>Sensor yang <em>mendengar</em> gedung.</h2>
+      <p class="lead">Sensor dan aktuator pintar: kualitas air kolam, sensor suhu, pencahayaan pintar, kontrol IoT HVAC, dan sensor hunian untuk gym dan spa.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> sensor terpasang di titiknya.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Connected:</strong> di jaringan dan melaporkan.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Integrated:</strong> dengan platform pemantauan.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini sensor dan perangkat pintar muncul di IT MPL dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F17-PoolSensor-01</span>
+        <span class="sample">F17-SmartLighting-Pool-01</span>
+        <span class="sample">F17-Pool-Audio-01</span>
+        <span class="sample">Temperature Sensor</span>
+        <span class="sample">Occupancy Sensor</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 54] SISTEM KESELAMATAN & KEAMANAN ---------- -->
+<section class="ficha reverse" id="ficha-54">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Sistem Keselamatan & Keamanan</span>
+      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/extintor.jpg" alt="Keselamatan">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · IT MPL</div>
+      <h2>Yang <em>melindungi</em> orang.</h2>
+      <p class="lead">Sistem keselamatan dan kebakaran: deteksi, alat pemadam (CO2/FM200), alarm, sprinkler, plus kontrol akses kendaraan, penghitungan, dan CCTV parkir.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Detection:</strong> sistem terpasang dan diuji.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Extinguishing:</strong> alat pemadam dan sprinkler ditempatkan.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Alarms:</strong> terintegrasi dan berfungsi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Parking:</strong> kontrol, penghitungan, dan CCTV operasional.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini sistem keselamatan muncul di IT MPL dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Fire Detection System</span>
+        <span class="sample">Fire Extinguisher</span>
+        <span class="sample">Fire Alarm</span>
+        <span class="sample">Sprinkler System</span>
+        <span class="sample">Vehicle Access Control</span>
+        <span class="sample">Vehicle Counting System</span>
+        <span class="sample">Parking Signage</span>
+        <span class="sample">Parking CCTV</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 55] SISTEM HVAC ---------- -->
+<section class="ficha" id="ficha-55">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Sistem HVAC</span>
+      <img src="https://arian-mg.github.io/AstonBocettosCitySuites/img/aac.jpg" alt="HVAC">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · IT MPL</div>
+      <h2>Iklim yang <em>terasa</em> di setiap ruang.</h2>
+      <p class="lead">Sistem pendingin udara untuk kamar dan area publik, bersama dengan sensor suhu untuk kontrol dan pemantauan.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Installed:</strong> sistem A/C terpasang dan diuji.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Sensors:</strong> suhu dipantau per zona.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>IoT Control:</strong> terintegrasi dengan platform.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini sistem HVAC muncul di IT MPL dan di lembar Infrastructure.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Air Conditioning System</span>
+        <span class="sample">Temperature Sensors</span>
+        <span class="sample">Temperature Control IoT</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 56] PERANGKAT LUNAK & LISENSI ---------- -->
+<section class="ficha reverse" id="ficha-56">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Perangkat Lunak & Lisensi</span>
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80" alt="Perangkat Lunak">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · IT MPL</div>
+      <h2>Yang <em>mengaktifkan</em> setiap perangkat.</h2>
+      <p class="lead">Lisensi dan platform: PMS, POS, Channel Manager, Revenue Management, Energy Management, IPTV Middleware, Chromecast Management, Guest WiFi Portal, Google Workspace, dan Ruijie Cloud.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Contract:</strong> ditandatangani dan dikirim ke korporat.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>License:</strong> diaktifkan dan ditetapkan.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Integration:</strong> diuji dengan sistem yang sesuai.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini lisensi dan platform muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">PMS License</span>
+        <span class="sample">POS License</span>
+        <span class="sample">IPTV Middleware</span>
+        <span class="sample">Google Workspace</span>
+        <span class="sample">Ruijie Cloud</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 57] PEMELIHARAAN & ALAT ---------- -->
+<section class="ficha" id="ficha-57">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Pemeliharaan & Alat</span>
+      <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1000&q=80" alt="Alat">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · IT MPL</div>
+      <h2>Yang <em>menopang</em> operasi harian.</h2>
+      <p class="lead">Alat jaringan (crimping, LAN tester, kompresor udara), suku cadang, dokumentasi teknis (diagram, manual), dan lisensi firmware.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Tools:</strong> kit jaringan lengkap.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Spare parts:</strong> tersedia di lokasi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Documentation:</strong> diagram dan manual diserahkan.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini alat dan suku cadang muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Network Tools</span>
+        <span class="sample">Spare Parts</span>
+        <span class="sample">Documentation</span>
+        <span class="sample">Licenses</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 58] PERALATAN PARKIR ---------- -->
+<section class="ficha reverse" id="ficha-58">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Peralatan Parkir</span>
+      <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=1000&q=80" alt="Parkir">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · IT MPL</div>
+      <h2>Kontrol <em>diam</em> dari tempat parkir.</h2>
+      <p class="lead">Kontrol akses kendaraan, sistem penghitungan, signage, dan kamera CCTV khusus untuk area parkir (SS, N1, N2, N3).</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>Access:</strong> kontrol kendaraan terpasang.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Counting:</strong> sistem penghitungan berfungsi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Surveillance:</strong> kamera CCTV di parkir.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Referensi MPL</span>
+        <span class="lbl-text">begini peralatan parkir muncul di IT MPL.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">Vehicle Access Control</span>
+        <span class="sample">Vehicle Counting System</span>
+        <span class="sample">Parking Signage</span>
+        <span class="sample">Parking CCTV</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ---------- [KARTU 59] PERALATAN ROOFTOP ---------- -->
+<section class="ficha" id="ficha-59">
+  <div class="wrap"><div class="ficha-inner">
+    <div class="ficha-visual">
+      <span class="tag"><span class="dot"></span>Peralatan Rooftop</span>
+      <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1000&q=80" alt="Rooftop">
+    </div>
+    <div class="ficha-text">
+      <div class="kicker">Kategori · Infrastruktur</div>
+      <h2>Level 17, <em>yang paling terlihat</em> dari hotel.</h2>
+      <p class="lead">Peralatan level 17: TV (Pool, Gym, Spa, Bar), sound system, kontrol akses (Gym, Spa, Pool), pencahayaan pintar, audio, dan sensor kualitas air kolam.</p>
+      <div class="checks">
+        <div class="check"><span class="box">✓</span><span><strong>TVs:</strong> terpasang di Pool, Gym, Spa, dan Bar.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Sound:</strong> sistem audio terintegrasi.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Access:</strong> kontrol akses di Gym, Spa, dan Pool.</span></div>
+        <div class="check"><span class="box">✓</span><span><strong>Sensors:</strong> kualitas air dan pencahayaan pintar.</span></div>
+      </div>
+      <div class="samples-label">
+        <span class="lbl-kicker">Contoh identifikasi</span>
+        <span class="lbl-text">begini cara peralatan level 17 diberi nama di Excel terlampir.</span>
+      </div>
+      <div class="samples">
+        <span class="sample">F17-Public-Pool</span>
+        <span class="sample">F17-Public-Gym</span>
+        <span class="sample">F17-Public-Spa</span>
+        <span class="sample">F17-Public-Bar</span>
+        <span class="sample">F17-Public-GreeterDesk</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+
+<!-- ============================================================
+     [BAGIAN 09] FOOTER
+     ============================================================ -->
 <footer>
-  <strong>Aston Bocettos City Suites</strong> · Manual Visual Preopening · Dokumen sinkronisasi teknis
+  <strong>Aston Bocettos City Suites</strong> · Manual Visual Pra-Pembukaan · Dokumen sinkronisasi teknis
 </footer>
 
+<!-- Tombol melayang untuk kembali ke atas -->
 <a href="#top" class="back-top" title="Kembali ke atas">↑</a>
 
 </body>
