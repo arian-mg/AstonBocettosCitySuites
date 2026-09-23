@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirigiendo · Detección de idioma</title>
+  <title>Mengalihkan · Deteksi bahasa</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     * {
@@ -69,7 +69,7 @@
 
     .ring .progress-circle {
       stroke: #00b4ff;
-      stroke-dasharray: 226.2; /* 2πr ≈ 226.2 */
+      stroke-dasharray: 226.2;
       stroke-dashoffset: 226.2;
       animation: progressFill 2.2s ease-out forwards;
       transition: stroke-dashoffset 0.1s;
@@ -80,7 +80,7 @@
         stroke-dashoffset: 226.2;
       }
       70% {
-        stroke-dashoffset: 45.24; /* 20% restante */
+        stroke-dashoffset: 45.24;
       }
       100% {
         stroke-dashoffset: 0;
@@ -180,7 +180,6 @@
       font-weight: 400;
     }
 
-    /* Ajuste responsive */
     @media (max-width: 480px) {
       .redirect-card {
         padding: 28px 18px;
@@ -212,11 +211,11 @@
     <div class="status-title" id="statusTitle">Detecting language...</div>
     <div class="status-sub" id="statusSub">Please wait a moment</div>
 
-    <!-- Enlaces de respaldo (se muestran siempre, pero con opacidad reducida) -->
+    <!-- Enlaces de respaldo -->
     <div class="fallback-links" id="fallbackLinks">
       <a href="index-es.html" class="btn-es" lang="es">Español</a>
       <a href="index-en.html" class="btn-en" lang="en">English</a>
-      <a href="index-in.html" class="btn-in" lang="hi">हिन्दी</a>
+      <a href="index-in.html" class="btn-in" lang="id">Bahasa Indonesia</a>
     </div>
     <div class="note">Serás redirigido automáticamente</div>
   </div>
@@ -224,73 +223,71 @@
   <script>
     (function() {
       // --- Configuración de idiomas y URLs ---
+      // 'in' es el código ISO 639-1 para indonesio (aunque algunos navegadores usan 'id')
       const LANG_MAP = {
         es: {
           url: 'index-es.html',
           title: 'Detectando idioma…',
-          sub: 'Redirigiendo a la versión en español',
-          manual: 'Español'
+          sub: 'Redirigiendo a la versión en español'
         },
         en: {
           url: 'index-en.html',
           title: 'Detecting language…',
-          sub: 'Redirecting to English version',
-          manual: 'English'
+          sub: 'Redirecting to English version'
         },
-        hi: {
+        id: {
           url: 'index-in.html',
-          title: 'भाषा का पता लगाया जा रहा है…',
-          sub: 'हिंदी संस्करण पर रीडायरेक्ट किया जा रहा है',
-          manual: 'हिन्दी'
+          title: 'Mendeteksi bahasa…',
+          sub: 'Mengalihkan ke versi Bahasa Indonesia'
         }
       };
 
-      const DEFAULT_LANG = 'en'; // inglés por defecto
+      const DEFAULT_LANG = 'en';
 
       // --- Detección de idioma ---
       function detectLanguage() {
-        // 1. Intentar con navigator.language (ej: "es-ES", "en-US", "hi-IN")
-        let navLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-        
-        // 2. Si navigator.languages está disponible, revisar todas las preferencias
+        const supported = ['es', 'en', 'id'];
+
+        // 1. Revisar navigator.languages (preferencias ordenadas)
         if (navigator.languages && navigator.languages.length) {
           for (let lang of navigator.languages) {
             const code = lang.toLowerCase().split('-')[0];
-            if (code === 'es' || code === 'en' || code === 'hi') {
-              return code;
+            // Normalizar 'in' (código antiguo) a 'id'
+            const normalized = (code === 'in') ? 'id' : code;
+            if (supported.includes(normalized)) {
+              return normalized;
             }
           }
         }
-        
-        // 3. Extraer código base de navigator.language
+
+        // 2. Fallback a navigator.language
+        let navLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
         const baseCode = navLang.split('-')[0];
-        if (baseCode === 'es' || baseCode === 'en' || baseCode === 'hi') {
-          return baseCode;
+        const normalized = (baseCode === 'in') ? 'id' : baseCode;
+        if (supported.includes(normalized)) {
+          return normalized;
         }
-        
-        // 4. Si no coincide con es, en, hi → inglés por defecto
+
+        // 3. Inglés por defecto
         return DEFAULT_LANG;
       }
 
-      // --- Obtener referencias del DOM ---
+      // --- Referencias del DOM ---
       const statusTitle = document.getElementById('statusTitle');
       const statusSub = document.getElementById('statusSub');
       const fallbackLinks = document.getElementById('fallbackLinks');
-      const progressCircle = document.querySelector('.progress-circle');
-      
-      // --- Detectar idioma y preparar redirección ---
+
+      // --- Detectar idioma ---
       const detectedLang = detectLanguage();
       const langConfig = LANG_MAP[detectedLang] || LANG_MAP[DEFAULT_LANG];
       const targetUrl = langConfig.url;
 
-      // Actualizar textos según idioma detectado
+      // Actualizar textos
       statusTitle.textContent = langConfig.title;
       statusSub.textContent = langConfig.sub;
-
-      // Ajustar el título de la página según idioma
       document.title = `🌐 ${langConfig.title}`;
 
-      // Opcional: resaltar el enlace del idioma detectado (buena práctica de UX)
+      // Resaltar el enlace del idioma detectado
       const links = fallbackLinks.querySelectorAll('a');
       links.forEach(link => {
         if (link.getAttribute('href') === targetUrl) {
@@ -302,49 +299,23 @@
         }
       });
 
-      // --- Redirección después de la animación ---
-      // Esperamos 2.4 segundos para que se complete la animación del círculo (2.2s + margen)
+      // --- Redirección automática ---
       const REDIRECT_DELAY = 2400;
-
-      // Mostrar siempre los enlaces manuales (por si acaso), pero ya se ven
-      // Si el usuario quiere hacer clic manualmente, los enlaces están activos.
-      
-      // Redirección suave después de un tiempo
       const redirectTimer = setTimeout(() => {
-        // Pequeña comprobación para evitar redirigir si el usuario ya navegó manualmente
         if (!document.hidden) {
           window.location.href = targetUrl;
         }
       }, REDIRECT_DELAY);
 
-      // Si el usuario hace clic en algún enlace, cancelamos la redirección automática
+      // Cancelar redirección si el usuario hace clic manualmente
       links.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function() {
           clearTimeout(redirectTimer);
-          // Permitimos que el enlace funcione normalmente
         });
       });
 
-      // Opcional: si la página se vuelve visible de nuevo (por ejemplo, el usuario volvió atrás),
-      // podríamos reiniciar, pero no es necesario.
-      
-      // Pequeño detalle: para navegadores que no soportan animaciones, igual redirige.
-      // Aseguramos que el círculo mantenga su estado final.
-      // (La animación CSS se encarga)
-
-      // Si por alguna razón el idioma no está en el mapa, forzamos inglés
-      if (!LANG_MAP[detectedLang]) {
-        // Redirigir a inglés explícitamente
-        console.warn('Idioma no soportado, redirigiendo a inglés por defecto.');
-        // La configuración ya usa DEFAULT_LANG = 'en'
-        // Pero por si acaso, forzamos:
-        if (targetUrl !== 'index-en.html') {
-          window.location.href = 'index-en.html';
-        }
-      }
-
-      // Pequeña mejora: actualizar el atributo lang del documento
-      document.documentElement.lang = detectedLang === 'hi' ? 'hi' : detectedLang;
+      // Ajustar el atributo lang del documento
+      document.documentElement.lang = detectedLang;
     })();
   </script>
 </body>
